@@ -1,0 +1,75 @@
+/* ───────────────────────────────────────────────
+    TABLE OF CONTENTS
+    1. Global Settings 
+    2. Primitive Tokens
+        2.A. Color Palettes
+        2.B. Typography Tokens
+        2.C. Spacing Tokens
+    3. CSS Variables - Design Tokens
+        2.A. Spacing Scale
+    4. Page Layout
+    5. Typography
+    6. Responsive Settings
+───────────────────────────────────────────────*/
+
+/* ───────────────────────────────────────────────
+Global Settings
+───────────────────────────────────────────────*/
+* {
+    margin:     0;
+    padding:    0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x:  hidden;
+    overflow-x:  clip;
+    /*font-family: 'Raleway', sans-serif;*/
+}
+
+:root {
+    /* ───────────────────────────────────────────────
+    Primitive Tokens > Color Palettes
+    ───────────────────────────────────────────────*/
+
+        /* ───────────────────────────────────────────────
+    Primitive Tokens > Typography Token
+    ───────────────────────────────────────────────*/
+
+    /* ───────────────────────────────────────────────
+    Primitive Tokens > Spacing Tokens
+    ───────────────────────────────────────────────*/
+
+    /* ───────────────────────────────────────────────
+    Primitive Tokens > Border Radius
+    ───────────────────────────────────────────────*/
+}
+
+/* ───────────────────────────────────────────────
+CSS Variables - Design Tokens
+───────────────────────────────────────────────*/
+
+/* ───────────────────────────────────────────────
+Page Layout
+───────────────────────────────────────────────*/
+
+/* ───────────────────────────────────────────────
+Typography
+───────────────────────────────────────────────*/
+
+/* ───────────────────────────────────────────────
+Responsive Settings
+───────────────────────────────────────────────*/
+@media screen and (min-width: 1920px) {}
+
+/*Widescreen*/ /*xxl*/
+@media screen and (min-width: 1440px) {}
+
+/*Tablet LG START*/ /*lg*/
+@media screen and (max-width: 992px) {}
+
+/*Tablet*/ /*md*/
+@media screen and (max-width: 768px) {}
+
+/*Mobile*/ /*sm*/
+@media screen and (max-width: 567px) {}

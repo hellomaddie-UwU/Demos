@@ -1,0 +1,368 @@
+/* ───────────────────────────────────────────────
+    TABLE OF CONTENTS
+    1. Body
+    2. Section Containers
+    3. Alternate Content
+    4. Agreement Profitability
+───────────────────────────────────────────────*/
+
+body {
+    background-color: var(--page-bg);
+}
+
+/* ───────────────────────────────────────────────
+Section Containers
+───────────────────────────────────────────────*/
+section, .section-dark {
+    padding: 80px 9%;
+}
+
+.section-dark {
+    background-color: var(--page-dark-bg);
+    overflow-x:       hidden;
+}
+
+.section-border-left-light {
+    position: relative;
+    width: 1px;
+    background-color: #c4c4c4;
+    height: 100%;
+    left: 30px;
+    top: 0px;
+}
+
+.hero-section {
+    padding-top:    144px;
+    padding-left:   9%;
+    padding-right:  9%;
+    padding-bottom: 80px;
+    overflow-x:     hidden;
+}
+
+/* ───────────────────────────────────────────────
+Alternate Content
+───────────────────────────────────────────────*/
+.kf-content-container {
+    display:        flex;
+    flex-direction: column;
+    gap:            var(--space-7);
+}
+
+.kf-content {
+    display:     flex;
+    align-items: center;
+    gap:         var(--space-7);
+}
+
+.kf-column {width: 50%;}
+
+.htw-content-container {
+    display: flex;
+    gap:     var(--space-4);
+}
+
+.hiw-card {
+    background-color: var(--dark-surface);
+    padding:          32px;
+    flex:             1 1 0;
+    height:           681px;
+    display:          flex;
+    flex-direction:   column;
+    position:         relative;
+    overflow:         hidden;
+}
+
+.hiw-card-45 {gap: 45px;}
+.hiw-card-20 {gap: 20px;}
+
+.hiw-img-fade {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 210px;
+    background: linear-gradient(
+    to bottom,
+    rgba(25,17,67,0) 0%,
+    rgba(25,17,67,0.54) 40%,
+    #191143 75%
+    );
+    pointer-events: none;
+    border-radius: 0 0 7px 7px;
+}
+
+.hiw-card-img-wrap img, .hiw-logos img {display: block;}
+
+.cta-container {padding-top: 90px; padding-bottom: 90px; z-index: 2;}
+
+/* Central warm radial glow — CSS stand-in for the blur image asset */
+.middle-cta-blur {
+    position:absolute; 
+    height: auto; 
+    width: 500px; 
+    left: 30%; 
+    margin-top: -20px;
+    z-index: 0;
+}
+
+.right-cta-blur {
+    position: absolute;
+    right: 3%;
+    margin-top: -40px;
+}
+
+.left-cta-blur {
+    display: block;
+    position: absolute;
+    left: 0%;
+    margin-top: 200px;
+}
+
+/*Insights Banner*/
+.insights-banner {
+    background-image:    url(/mspbots/imgs/growth-banner-bg-img.png);
+    background-size:     cover;
+    background-position: center;
+    background-repeat:   no-repeat;
+    margin:               80px 9%;
+    border-radius:        18px;
+    display:              flex;
+    justify-content:      space-around;
+    padding:              60px 52px;
+}
+
+.insights-banner p {width: 75%;}
+
+.insights-banner .btn-demo-outline {height: fit-content;}
+
+
+/* ───────────────────────────────────────────────
+Agreement Profitability
+───────────────────────────────────────────────*/
+.ap-hero-img-wrap {position: relative;}
+
+.ap-profit-card {
+    position:      absolute;
+    background-color: var(--white);
+    border-radius: var(--radius-xs);
+    padding:       10px 14px;
+    box-shadow:    0 0 26px rgba(0, 0, 0, 0.15);
+    white-space:   nowrap;
+    z-index:       2;
+}
+
+.ap-profit-line {
+    font-size:     var(--text-md);
+    font-weight:   var(--font-weight-medium);
+    color:         var(--text-primary);
+    margin-bottom: 2px;
+}
+
+.ap-profit-amount {
+    color:       #07a721;
+    font-weight: var(--font-weight-bold);
+}
+
+.ap-profit-meta {
+    font-size:     var(--text-xs);
+    color:         var(--text-primary);
+    margin-bottom: 0;
+}
+
+.ap-profit-arrow {
+    position:        absolute;
+    bottom:          -8px;
+    width:           0;
+    height:          0;
+    border-left:     8px solid transparent;
+    border-right:    8px solid transparent;
+    border-top:      8px solid var(--white);
+}
+
+/* Insights banner */
+.ap-banner-heading {
+    font-family:   var(--font-sans);
+    font-weight:   var(--font-weight-bold);
+    font-size:     26px;
+    line-height:   32px;
+    color:         var(--white);
+    margin-bottom: var(--space-2);
+}
+
+.ap-banner-content p {color: rgba(255, 255, 255, 0.9);}
+
+.ap-banner .btn-demo-outline {position: relative; z-index: 1;}
+
+
+/* FAQ accordion */
+
+
+/* Benefits vertical tabs */
+.ap-vtabs {display: flex; flex-direction: column;}
+
+.ap-vtab {
+    border-bottom: 1.5px solid var(--mspbots-blue);
+    padding:       30px 20px;
+    cursor:        pointer;
+}
+
+.ap-vtab:first-child {padding-top: 0;}
+
+.ap-vtab:last-child {border-bottom: none;}
+
+.ap-vtab-body {
+    display:    none;
+    margin-top: var(--space-2);
+}
+
+.ap-vtab.active .ap-vtab-body {display: block;}
+
+.ap-vtab-visual {
+    background-color: var(--white);
+    border:            var(--card-border);
+    border-radius:     var(--radius-sm);
+    overflow:          hidden;
+}
+
+.ap-vtab-panel {display: none;}
+
+.ap-vtab-panel.active {display: block;}
+
+.ap-vtab-img {height: 480px;}
+
+/* Testimonials */
+.testimonial-content {
+    display:               grid;
+    grid-template-columns: minmax(280px, 431px) 1fr;
+    gap:                   var(--space-7);
+    align-items:           start;
+    margin-top:            var(--space-9);
+}
+
+.video-slider-controls {
+    display:         flex;
+    justify-content: flex-end;
+    gap:             var(--space-3);
+    margin-bottom:   var(--space-5);
+}
+
+.video-slider-grid {
+    display:               grid;
+    grid-template-columns: 1fr 1fr;
+    gap:                   var(--space-6);
+}
+
+.video-thumb {aspect-ratio: 460 / 256;}
+
+/* Next Steps CTA */
+.cta-next-steps {
+    display:               grid;
+    grid-template-columns: minmax(280px, 456px) 1fr;
+    gap:                   var(--space-9);
+    align-items:           center;
+    max-width:             1180px;
+    margin:                0 auto;
+}
+
+.cta-next-steps-copy {
+    font-family:    var(--font-subtitle);
+    font-weight:    var(--font-weight-medium);
+    font-size:      var(--text-xl);
+    text-transform: uppercase;
+    letter-spacing: 0.72px;
+    color:          #f1f1f1;
+    line-height:    43px;
+    margin:         var(--space-4) 0 0;
+}
+
+.cta-next-steps-copy a {
+    color:           #88e7fa;
+    text-decoration: underline;
+}
+
+/* ───────────────────────────────────────────────
+Sentiment Analysis
+───────────────────────────────────────────────*/
+.sa-hero-img-wrap {position: relative;}
+
+.sa-hero-img {aspect-ratio: 568 / 498;}
+
+.sa-hero-square {
+    position:      absolute;
+    width:         77px;
+    height:        77px;
+    background-color: var(--white);
+    border-radius: 9px;
+    box-shadow:    0 0 26px rgba(0, 0, 0, 0.08);
+}
+
+.sa-hero-square-1 {left: 10%; bottom: 76px;}
+.sa-hero-square-2 {left: 18%; bottom: 20px;}
+
+.sa-benefit-img {aspect-ratio: 632 / 420;}
+
+/* ───────────────────────────────────────────────
+Responsive Settings
+───────────────────────────────────────────────*/
+@media screen and (min-width: 1920px) {}
+
+/*Widescreen*/ /*xxl*/
+@media screen and (min-width: 1440px) {}
+
+/*Tablet LG START*/ /*lg*/
+@media screen and (max-width: 992px) {
+    .kf-content {
+        flex-direction: column;
+        gap: var(--space-3);
+    }
+
+    .kf-column {width: 100%;}
+
+    .hiw-card {
+        padding: 20px;
+        height: 570px;
+    }
+
+    .left-cta-blur {display: none;}
+
+    .ap-banner {flex-direction: column; align-items: flex-start; text-align: left;}
+
+    .kf-card-grid {grid-template-columns: 1fr;}
+
+    .ap-vtab-img {height: 360px;}
+
+    .testimonial-content {grid-template-columns: 1fr;}
+
+    .cta-next-steps {grid-template-columns: 1fr;}
+}
+
+/*Tablet*/ /*md*/
+@media screen and (max-width: 768px) {
+
+    .htw-content-container {
+        display:    block;
+        height:     fit-content;
+        min-height: auto;
+    }
+
+    .hiw-card {height: auto; margin-bottom: 24px;}
+
+    .hiw-card-img-wrap img, .hiw-logos img, .hiw-img-fade {display: none;}
+
+    .ap-profit-card {display: none;}
+
+    .sa-hero-square {display: none;}
+
+    .insights-banner {flex-direction: column;}
+
+    .insights-banner p {width: 100%;}
+
+    .faq-question-text {font-size: var(--text-md); line-height: 24px;}
+
+    .video-slider-grid {grid-template-columns: 1fr;}
+
+    .video-slider-controls {justify-content: center;}
+}
+
+/*Mobile*/ /*sm*/
+@media screen and (max-width: 567px) {}

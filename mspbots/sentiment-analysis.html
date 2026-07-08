@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/svg" href="">
+        <!--SEO START-->
+        <title>MSPbots Demo | Sentiment Analysis | hellomaddie</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+
+        <!-- Universal Open Graph -->
+        <meta property="og:title" content="">
+        <meta property="og:description" content="">
+        <meta property="og:image" content=""> <!-- Replace with actual image URL: 1200×630px -->
+        <meta property="og:image:alt" content="">
+        <meta property="og:url" content="#"> <!-- Needs to be the official URL -->
+        <meta property="og:type" content="website">
+
+        <!-- Twitter/X Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="">
+        <meta name="twitter:description" content="">
+        <meta name="twitter:image" content=""> <!-- Replace with actual image URL: 1200×630px -->
+        <!--SEO END-->
+
+        <!--Stylesheet START-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="main.css" rel="stylesheet">
+        <link href="page.css" rel="stylesheet">
+        <link href="mspbots-components.css" rel="stylesheet">
+        <!--Stylesheet END-->
+
+        <!--Fonts START-->
+        <!--insert google font url here-->
+        <!--Fonts END-->
+    </head>
+
+    <body>
+        <!-- ===== Navigation START ===== -->
+        <nav class="navbar navbar-expand-lg site-nav">
+
+            <!-- Logo -->
+            <a class="p-0" href="#">
+                <img class="nav-logo" src="imgs/Logo.svg" alt="MSPbots logo">
+            </a>
+
+            <!-- Hamburger (mobile only) -->
+            <button class="navbar-toggler ms-auto" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navMenu"
+                    aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible links -->
+            <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="nav-links ms-lg-auto">
+
+                <!-- SOLUTIONS dropdown -->
+                <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    SOLUTIONS <span class="chevron">▾</span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Business Intelligence Dashboard</a></li>
+                    <li><a class="dropdown-item" href="#">Micro Training Bots</a></li>
+                    <li><a class="dropdown-item" href="#">Next Ticket</a></li>
+                    <li><a class="dropdown-item" href="#">Integrations</a></li>
+                    <li><a class="dropdown-item" href="#">Featured Apps</a></li>
+                </ul>
+                </li>
+
+                <!-- MSP RESOURCES dropdown -->
+                <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    MSP RESOURCES <span class="chevron">▾</span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Knowledge Base</a></li>
+                    <li><a class="dropdown-item" href="#">Blog</a></li>
+                    <li><a class="dropdown-item" href="#">Events</a></li>
+                    <li><a class="dropdown-item" href="#">Webinar</a></li>
+                    <li><a class="dropdown-item" href="#">Testimonials</a></li>
+                    <li><a class="dropdown-item" href="#">Case Studies</a></li>
+                </ul>
+                </li>
+
+                <li><a href="#">PRICING</a></li>
+
+                <!-- ABOUT dropdown -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        ABOUT <span class="chevron">▾</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Story | Mission | Vision</a></li>
+                        <li><a class="dropdown-item" href="#">Leadership</a></li>
+                        <li><a class="dropdown-item" href="#">Data Security</a></li>
+                        <li><a class="dropdown-item" href="#">Bug Bounty Program</a></li>
+                        <li><a class="dropdown-item" href="#">Contact Us</a></li>
+                        <li><a class="dropdown-item" href="#">Terms of Service</a></li>
+                        <li><a class="dropdown-item" href="#">Privacy</a></li>
+                        <li><a class="dropdown-item" href="#">Service Status</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">LOGIN</a></li>
+                <li class="nav-divider-item"><div class="nav-divider"></div></li>
+                <li>
+                    <a href="#">
+                        SIGN UP
+                        <img class="btn-arrow-icon" src="imgs/nav-arrow.svg">
+                    </a>
+                </li>
+                <li>
+                <a href="#" class="btn-demo-outline">
+                    BOOK A DEMO
+                    <img class="btn-arrow-icon" src="imgs/nav-arrow.svg">
+                </a>
+                </li>
+
+            </ul>
+            </div>
+
+        </nav>
+        <!-- ===== Navigation END ===== -->
+
+        <!-- ===== Hero START ===== -->
+        <section class="hero-section">
+            <div class="row align-items-center g-5">
+
+                <!-- Left: Text -->
+                <div class="col-lg-6 col-md-12">
+                    <!-- Tags -->
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="section-tag section-tag-teal">New App</span>
+                        <span class="section-tag section-tag-teal-outline">Included in Pro Bundle</span>
+                    </div>
+
+                    <!-- Headline -->
+                    <h1 class="mt-3">Powerful Analytics &amp; Proactive Management <br> with <span class="gradient-text">Sentiment Analysis</span></h1>
+
+                    <!-- Subtext + Body -->
+                    <p class="section-subtext mt-2">Works with your existing tools</p>
+                    <p class="mt-3 mb-4">
+                        MSPbots' AI Sentiment App monitors ticket notes in near real time to help act early, respond faster, and deliver smarter service.
+                    </p>
+
+                    <!-- CTA -->
+                    <a class="btn-primary" href="#">
+                        <button>BOOK A DEMO TODAY! <img src="imgs/nav-arrow.svg"></button>
+                    </a>
+                </div>
+
+                <!-- Right: Hero image -->
+                <div class="col-lg-6 col-md-12 sa-hero-img-wrap">
+                    <div class="img-placeholder sa-hero-img">[ Hero Image ]</div>
+                    <div class="sa-hero-square sa-hero-square-1"></div>
+                    <div class="sa-hero-square sa-hero-square-2"></div>
+                </div>
+
+            </div>
+        </section>
+        <!-- ===== Hero END ===== -->
+
+        <!-- ===== Benefits START ===== -->
+        <section>
+
+            <!-- Section header -->
+            <div class="mb-4">
+                <span class="section-tag section-tag-light">Benefits</span>
+                <h2 class="mt-2">
+                    Why Use <span class="gradient-text">Sentiment Analysis</span>?
+                </h2>
+            </div>
+
+            <!-- Feature item: Trust Building Toward Clients -->
+            <div class="row align-items-center g-4">
+                <div class="col-lg-5">
+                    <p class="title">Trust Building Toward Clients</p>
+                    <p>
+                        Maintains higher client satisfaction by showing clients they're being heard. With Sentiment Analysis' quick Description and Action suggestion, your employees can demonstrate immediate proactive approaches to client issues and suggestions.
+                    </p>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="img-placeholder sa-benefit-img">[ Sentiment Analysis Demo Mockup ]</div>
+                </div>
+            </div>
+
+            <!-- 3-up Feature Row -->
+            <div class="card-row">
+                <div class="card-row-cell">
+                    <p class="title">Proactive Issue Management</p>
+                    <p>
+                        With Sentiment Analysis, catch problems before they escalate and identify negative sentiment early on. Enable preventative measures that address client concerns before they have a chance to complain.
+                    </p>
+                </div>
+                <div class="card-row-cell">
+                    <p class="title">Cost Saved Through AI Automation</p>
+                    <p>
+                        By reducing manual labor hours and eliminating the need for human sentiment monitoring, Sentiment Analysis minimizes costs of talent resources while significantly improving client retention.
+                    </p>
+                </div>
+                <div class="card-row-cell">
+                    <p class="title">Efficiently Automate Through Sentiment per Resource</p>
+                    <p>
+                        Maintains higher client satisfaction by showing clients they're being heard. With Sentiment Analysis' quick Description and Action suggestion, your employees can demonstrate immediate proactive approaches to client issues and suggestions.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- ===== Benefits END ===== -->
+
+        <!-- ===== Key Features START ===== -->
+        <section class="section">
+
+            <h2 class="text-center gradient-text">Key Features</h2>
+
+            <div class="kf-content-container">
+                <div class="kf-content">
+                    <div class="kf-column">
+                        <p class="title">Leadership Dashboard</p>
+                        <p class="kf-body">Gain insights into the service performance and project profitability of your company by overseeing your operation's track response times, open tickets, managed endpoints, client agreements, and technical alignment activities.</p>
+                    </div>
+                    <div class="kf-column">
+                        <img class="w-100" src="/mspbots/imgs/leadership-dashboard.png">                      
+                    </div>
+                </div>
+
+                <div class="kf-content">
+                    <div class="kf-column">
+                        <img class="w-100" src="/mspbots/imgs/service-dashboard.png">
+                    </div>
+                    <div class="kf-column">
+                        <p class="title">Service Delivery Dashboard</p>
+                        <p class="kf-body">Enhance service efficiency by gaining insights into your company's support tickets and centralized services, while also monitoring response times, patch compliance, alarms, and technical alignment efforts.</p>
+                    </div>
+                </div>
+
+                <div class="kf-content">
+                    <div class="kf-column">
+                        <p class="title">Financial Dashboard</p>
+                        <p class="kf-body">Evaluate your profitability and analyze revenue trends by overseeing the new and lost MRR, net MRR growth, service revenue, and financial leverage statistics of your sales performance.</p>
+                    </div>
+                    <div class="kf-column">
+                        <img class="w-100" src="/mspbots/imgs/financial-dashboard.png">
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+        <!-- ===== Key Features END ===== -->
+
+        <!-- ===== How It Works START ===== -->
+        <section class="section-dark">
+            <div class="text-center mb-5">
+                <span class="section-tag section-tag-dark">How It Works</span>
+                <h2 class="text-white">Better Streamlined Operations<br>
+                and Analytics in <span class="gradient-text">3 Easy Steps</span></h2>
+            </div>
+
+            <div class="htw-content-container">
+                <div class="hiw-card hiw-card-45">
+                    <div> <!--hiw-card-top-->
+                        <img class="mb-2" src="/mspbots/imgs/step-1.svg">                     
+                        <div>
+                            <h6 class="text-white">Connect Your PSA, RMM &amp; Accounting Software</h6>
+                            <p class="text-white">Sync your data seamlessly into our platform.</p>
+                        </div>
+                    </div>
+
+                    <!-- Logo grid -->
+                    <div class="hiw-logos">
+                        <img class="w-100" src="/mspbots/imgs/step-1-img.png">
+                    </div>
+                </div>
+
+                <div class="hiw-card hiw-card-20">
+                    <div> <!--hiw-card-top-->
+                        <img class="mb-2" src="/mspbots/imgs/step-2.svg">
+                        <div>
+                            <h6 class="text-white">Configure Your Settings</h6>
+                            <p class="text-white">Map your chart of Accounts through our Accounting Mapping, then adjust your data through the TruPeer Smart Number Settings.</p>
+                        </div>
+                    </div>
+                    <div class="hiw-card-img-wrap">
+                        <img class="w-100" src="/mspbots/imgs/step-2-img.png">
+                        <div class="hiw-img-fade"></div>
+                    </div>
+                </div>
+
+                <div class="hiw-card hiw-card-45">
+                    <div> <!--hiw-card-top-->
+                        <img class="mb-2" src="/mspbots/imgs/step-3.svg">                      
+                        <div>
+                            <h6 class="text-white">Validate and Monitor</h6>
+                            <p class="text-white">Track your smart numbers with confidence and stay on top of your data like a pro.</p>
+                        </div>
+                    </div>
+                    <div class="hiw-card-img-wrap">
+                        <img class="w-100" src="/mspbots/imgs/step-3-img.png">
+                        <div class="hiw-img-fade"></div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- ===== How It Works END ===== -->
+
+        <!-- ===== CTA START ===== -->
+        <section class="section-dark">
+
+            <img class="middle-cta-blur" src="/mspbots/imgs/middle-cta-blur.png">
+            <img class="right-cta-blur" src="/mspbots/imgs/right-cta-blur.png">
+            <img class="left-cta-blur" src="/mspbots/imgs/left-cta-blur.png">
+
+            <!-- Content -->
+            <div class="cta-container">
+
+                <div class="cta-text-wrap">
+                    <!-- Headline -->
+                    <div class="text-center">
+                        <h1 class="text-white">Get</h1>
+                        <h1 class="gradient-text">TruPeer Smart Numbers</h1>
+                        <h1 class="text-white">for only $99</h1>
+                        
+                        <!-- Promo badge -->
+                        <img class="mb-5" src="/mspbots/imgs/limited-promo-tag.svg">
+                        <br>
+                        <!-- CTA Button -->
+                        <a href="#" class="btn-demo-outline" style="z-index: 3;">
+                            BOOK A DEMO
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ===== CTA END ===== -->
+
+        <!-- ===== Footer START ===== -->
+        <footer>
+            <div class="container-fluid">
+
+                <!-- Row 1: Social icons + Newsletter signup -->
+                <div class="row footer-top align-items-start">
+                    <div class="col-lg-3 col-md-4 col-12 footer-social">
+                        <img class="socmed-icon" src="/mspbots/imgs/facebook.svg">
+                        <img class="socmed-icon" src="/mspbots/imgs/youtube.svg">
+                        <img class="socmed-icon" src="/mspbots/imgs/twitter.svg">
+                        <img class="socmed-icon" src="/mspbots/imgs/linkedin.svg">
+                    </div>
+
+                    <div class="col-lg-5 col-md-8 col-12 footer-newsletter-text">
+                        <p class="newsletter-heading">Sign Up for Our Monthly Newsletter</p>
+                        <p class="footer-subtext">Get updates, industry insights, events, and more straight into your inbox.</p>
+                    </div>
+
+                    <div class="col-lg-4 col-12 footer-newsletter-form">
+                        <label class="footer-label" for="footer-email">Email<span class="required">*</span></label>
+                        <input type="email" id="footer-email" class="footer-input" placeholder="">
+                        <button class="footer-submit-btn">Submit</button>
+                    </div>
+                </div>
+
+                <!-- Row 2: Link columns -->
+                <div class="row footer-links">
+                    <div class="col-lg-3 col-6 footer-links-col">
+                        <p class="footer-col-title">Solutions</p>
+                        <ul>
+                            <li><a href="#">Business Intelligence Dashboards</a></li>
+                            <li><a href="#">Micro Training Bots</a></li>
+                            <li><a href="#">Next Ticket</a></li>
+                            <li><a href="#">Attendance Manager</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-6 footer-links-col">
+                        <p class="footer-col-title">MSP Resources</p>
+                        <ul>
+                            <li><a href="#">Knowledge Base</a></li>
+                            <li><a href="#">Community Forum</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Events</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-6 footer-links-col">
+                        <p class="footer-col-title">About</p>
+                        <ul>
+                            <li><a href="#">Story | Mission | Vision</a></li>
+                            <li><a href="#">Data Security</a></li>
+                            <li><a href="#">Bug Bounty Program</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Privacy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-6 footer-links-col">
+                        <p class="footer-col-title">Get Started</p>
+                        <ul>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">Get Started</a></li>
+                            <li><a href="#">Book a Demo</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Row 3: Big wordmark logo -->
+                <div class="row footer-logo-row">
+                    <div class="col-12 text-center">
+                        <img class="w-100" src="/mspbots/imgs/Logo.svg">
+                    </div>
+                </div>
+
+                <!-- Row 4: Contact info + Copyright -->
+                <div class="row footer-bottom align-items-center">
+                    <div class="col-lg-8 col-12 footer-contact">
+                        <p class="footer-contact-item">
+                            <img src="/mspbots/imgs/phone.svg">
+                            1.312.205.5608
+                        </p>
+                        <p class="footer-contact-item">
+                            <img src="/mspbots/imgs/pin.svg">
+                            123 W Oak St Unit L, Chicago IL 60610
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-12 footer-copyright text-lg-end">
+                        &copy;2024 MSPbots.ai All Rights Reserved.
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+        <!-- ===== Footer END ===== -->
+
+        <!--Bootstrap JS START-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!--Bootstrap JS END-->
+    </body>
+</html>

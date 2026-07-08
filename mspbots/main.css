@@ -1,0 +1,230 @@
+/* ───────────────────────────────────────────────
+    TABLE OF CONTENTS
+    1. Global Settings 
+    2. Primitive Tokens
+        2.A. Color Palettes
+        2.B. Typography Tokens
+        2.C. Spacing Tokens
+    3. CSS Variables - Design Tokens
+        2.A. Spacing Scale
+    4. Typography
+    5. Responsive Settings
+───────────────────────────────────────────────*/
+
+/* ───────────────────────────────────────────────
+Global Settings
+───────────────────────────────────────────────*/
+* {
+    margin:     0;
+    padding:    0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x:  hidden;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+:root {
+    /* ───────────────────────────────────────────────
+    Primitive Tokens > Color Palettes
+    ───────────────────────────────────────────────*/
+    --page-bg:      #f8f8f9; /*regular sections*/
+    --page-dark-bg: #100a2a; /*dark-themed sections*/
+    --dark-surface: #1b1146; /*on nav bar, footer, buttons, and cards*/
+    --card-border:    1.5px solid rgba(0, 0, 0, 0.15);
+    --tag-bg:      #ececef;
+
+    --white: #fff;
+
+    /*Buttons*/
+    --mspbots-blue:#0c82ca;
+
+    /*Gradients*/
+    --purple:     #aa08fc;
+    --btn-gradient: linear-gradient(to right, var(--mspbots-blue) 27.45%, var(--purple) 98.24%);
+    --gradient-border: linear-gradient(90deg, #00E0C9 0%, #2C77FF 65%, #6D74FF 100%);
+
+    /*Text*/
+    --text-primary:#303133;
+    --text-body:  #606266;
+    
+
+    /* ───────────────────────────────────────────────
+    Primitive Tokens > Typography Token
+    ───────────────────────────────────────────────*/
+    --font-sans:     'Raleway';
+    --font-subtitle: 'Dosis';
+    /*--font-mono:  for coding if ever I finally need it :)*/
+    
+    --text-xs:   0.75rem;    /* 12px */
+    --text-sm:   0.875rem;   /* 14px */
+    --text-base: 1rem;       /* 16px */
+    --text-md:   1.125rem;   /* 18px */
+    --text-lg:   1.3rem;     /* 21px */
+    --text-xl:   1.5rem;     /* 24px */
+    --text-2xl:  1.875rem;   /* 30px */
+    --text-3xl:  2.3rem;     /* 38px */
+    --text-4xl:  3rem;       /* 48px */
+
+    --font-weight-light:    300;
+    --font-weight-regular:  400;
+    --font-weight-medium:   500;
+    --font-weight-semibold: 600;
+    --font-weight-bold:     700;
+
+    /* ───────────────────────────────────────────────
+    Primitive Tokens > Spacing Tokens
+    ───────────────────────────────────────────────*/
+    --space-0:  0px;
+    --space-1:  4px;
+    --space-2:  8px;
+    --space-3:  12px;
+    --space-4:  16px;
+    --space-5:  20px;
+    --space-6:  24px;
+    --space-7:  32px;
+    --space-8:  40px;
+    --space-9:  48px;
+    --space-10: 64px;
+    --space-11: 80px;
+    --space-12: 96px;
+    /* ───────────────────────────────────────────────
+    Primitive Tokens > Border Radius
+    ───────────────────────────────────────────────*/
+    --radius-xxs:  4px;
+    --radius-xs:   8px;
+    --radius-sm:   12px;
+    --radius-full: 999px;
+}
+
+/* ───────────────────────────────────────────────
+CSS Variables - Design Tokens
+───────────────────────────────────────────────*/
+/*Spacing Scale START*/
+    .space-0  {gap:var(--space-0);}
+    .space-1  {gap:var(--space-1);}
+    .space-2  {gap:var(--space-2);}
+    .space-3  {gap:var(--space-3);}
+    .space-4  {gap:var(--space-4);}
+    .space-5  {gap:var(--space-5);}
+    .space-6  {gap:var(--space-6);}
+    .space-7  {gap:var(--space-7);}
+    .space-8  {gap:var(--space-8);}  
+    .space-9  {gap:var(--space-9);}
+    .space-10 {gap:var(--space-10);}
+    .space-11 {gap:var(--space-11);}
+    .space-12 {gap:var(--space-12);}
+/*Spacing Scale END*/
+
+/* ───────────────────────────────────────────────
+Typography
+───────────────────────────────────────────────*/
+.gradient-text {
+    background:              linear-gradient(90deg, var(--mspbots-blue) 0%, var(--purple) 100%);
+    background-clip:         text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-teal {
+    background:              linear-gradient(90deg, #00e0c9 0%, #2c77ff 65%, #6d74ff 100%);
+    background-clip:         text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.title {
+    font-weight:   var(--font-weight-bold);
+    font-size:     var(--text-lg);
+    line-height:   32px;
+    color:         var(--dark-surface);
+    margin-bottom: var(--space-1);
+}
+
+.section-subtext {
+    font-family:    var(--font-subtitle);
+    font-weight:    var(--font-weight-semibold);
+    font-size:      var(--text-xl);
+    text-transform: uppercase;
+    color:          var(--text-body);
+}
+
+.sec-body-50 {
+    width:  70%; 
+    margin: 0 auto;
+}
+
+.kf-body {width: 90%;}
+
+.footnote {
+    font-style: italic;
+    font-size: var(--text-xs);
+    line-height: 18px;
+    color: var(--text-body);
+    margin-bottom: 0px;
+}
+
+.newsletter-heading {
+    font-family:   var(--font-subtitle);
+    font-weight:   var(--font-weight-semibold);
+    font-size:     var(--text-md);
+    color:         var(--white);
+    margin-bottom: var(--space-1);
+}
+
+h1 {
+    color:       var(--text-primary);
+    font-size:   var(--text-4xl);
+    font-weight: var(--font-weight-bold);
+    line-height: 53px;
+}
+
+h2 {
+    color:       var(--text-primary);
+    font-size:   var(--text-3xl);
+    font-weight: var(--font-weight-bold);
+    line-height: 40px;
+}
+
+h5 {
+    color:       var(--text-primary);
+    font-size:   var(--text-xl);
+    font-weight: var(--font-weight-bold);
+    line-height: 32px;
+}
+
+h6 {
+    color:       var(--text-primary);
+    font-size:   var(--text-lg);
+    font-weight: var(--font-weight-semibold);
+    line-height: 28px;
+}
+
+p {
+    color:          var(--text-body);
+    font-size:      var(--text-base);
+    font-weight:    var(--font-weight-regular);
+    line-height:    25px;
+    letter-spacing: 0.32px;
+}
+
+/* ───────────────────────────────────────────────
+Responsive Settings
+───────────────────────────────────────────────*/
+@media screen and (min-width: 1920px) {}
+
+/*Widescreen*/ /*xxl*/
+@media screen and (min-width: 1440px) {}
+
+/*Tablet LG START*/ /*lg*/
+@media screen and (max-width: 992px) {
+    .sec-body-50, .kf-body {width: 100%;}
+}
+
+/*Tablet*/ /*md*/
+@media screen and (max-width: 768px) {}
+
+/*Mobile*/ /*sm*/
+@media screen and (max-width: 567px) {}

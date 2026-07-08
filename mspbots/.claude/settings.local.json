@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p \"/Users/biancamaddela/Documents/hellomaddie 2026/Demos/mspbots/.claude\")",
+      "Bash(curl -s http://localhost:4173/agreement-profitability.html)",
+      "mcp__14e70c09-da7a-417c-92f3-d369e6c29446__get_design_context",
+      "mcp__14e70c09-da7a-417c-92f3-d369e6c29446__get_metadata",
+      "Bash(python3 -c ' *)",
+      "Read(//tmp/**)",
+      "mcp__14e70c09-da7a-417c-92f3-d369e6c29446__whoami",
+      "Bash(grep -n \"aspect-ratio: auto\\\\|^}$\" \"/Users/biancamaddela/Documents/hellomaddie 2026/Demos/mspbots/mspbots-components.css\")"
+    ]
+  }
+}

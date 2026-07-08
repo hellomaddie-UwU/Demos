@@ -1,0 +1,480 @@
+/* ───────────────────────────────────────────────
+    TABLE OF CONTENTS
+    1. Site Header (logo + version tag)
+    2. Hero Banner (title card + decoration)
+    3. Hero Preview Cards
+    4. Table of Contents (sticky + scrollspy)
+    5. Chapter Header
+    6. Text Blocks / Paragraphs
+    7. Code Blocks (copy-paste-code)
+    8. Image Guidelines List
+    9. Icon Chips
+    10. Responsive Settings
+───────────────────────────────────────────────*/
+
+/* ───────────────────────────────────────────────
+1. Site Header
+───────────────────────────────────────────────*/
+.site-header {
+    position:    relative;
+    z-index:     2;
+    padding-top: 20px;
+}
+
+.header-bar {
+    display:         flex;
+    align-items:     center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 50px;
+    width:  auto;
+}
+
+.version-tag {
+    font-family: var(--font-main);
+    font-weight: 600;
+    font-size:   var(--fs-body);
+    color:       var(--color-msp-blue);
+}
+
+/* ───────────────────────────────────────────────
+2. Hero Banner
+───────────────────────────────────────────────*/
+.hero-banner {
+    position:   relative;
+    margin-top: 32px;
+    isolation:  isolate;
+}
+
+.hero-decoration {
+    position:  absolute;
+    left:      50%;
+    top:       120px;
+    transform: translateX(-50%) rotate(-8deg);
+    width:     150%;
+    height:    420px;
+    background: radial-gradient(ellipse 60% 100% at 30% 40%, rgba(89, 167, 246, 0.55), transparent 70%),
+                radial-gradient(ellipse 50% 90% at 65% 60%, rgba(174, 114, 249, 0.45), transparent 70%),
+                radial-gradient(ellipse 70% 100% at 50% 100%, rgba(89, 167, 246, 0.4), transparent 70%);
+    filter:    blur(60px);
+    z-index:   -1;
+    pointer-events: none;
+}
+
+.hero-card {
+    background:      var(--color-card-bg);
+    border-radius:   var(--radius-sm);
+    padding:         52px 60px;
+    backdrop-filter: blur(6px);
+}
+
+.sparkle-row {
+    display:       flex;
+    align-items:   center;
+    gap:           11px;
+    margin-bottom: 20px;
+}
+
+.sparkle-row svg {
+    display: block;
+}
+
+.hero-title {
+    font-family:  var(--font-main);
+    font-weight:  700;
+    font-size:    var(--fs-h1);
+    line-height:  var(--lh-h1);
+    background:   var(--gradient-title);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color:        transparent;
+    margin-bottom: 4px;
+}
+
+.hero-subtitle {
+    font-family:    var(--font-subtitle);
+    font-weight:    600;
+    font-size:      var(--fs-subtitle);
+    letter-spacing: 0.78px;
+    text-transform: uppercase;
+    color:          var(--color-text-tertiary);
+}
+
+.hero-cards-row {
+    display: flex;
+    gap:     34px;
+    margin:  48px -80px 0;
+    padding: 0 80px;
+}
+
+.hero-card-placeholder {
+    flex:          1 1 0;
+    height:        262px;
+    border-radius: var(--radius-md);
+    overflow:      hidden;
+    background:    var(--color-card-bg);
+}
+
+.hero-card-placeholder img {
+    width:      100%;
+    height:     100%;
+    object-fit: cover;
+}
+
+/* ───────────────────────────────────────────────
+3. Page Layout Wrapper
+───────────────────────────────────────────────*/
+.content {
+    display:        flex;
+    flex-direction: column;
+    gap:            96px;
+    min-width:      0;
+}
+
+/* ───────────────────────────────────────────────
+4. Table of Contents
+───────────────────────────────────────────────*/
+.toc {
+    position:       sticky;
+    top:            32px;
+    display:        flex;
+    flex-direction: column;
+    gap:            28px;
+    align-self:     start;
+    max-height:     calc(100vh - 64px);
+    overflow-y:     auto;
+}
+
+.toc-chapter {
+    display:        flex;
+    flex-direction: column;
+    gap:            6px;
+}
+
+.toc-chapter-title {
+    font-family:    var(--font-main);
+    font-weight:    700;
+    font-size:      var(--fs-label);
+    letter-spacing: -0.17px;
+    text-transform: uppercase;
+    color:          var(--color-msp-blue);
+}
+
+.toc-links {
+    display:        flex;
+    flex-direction: column;
+    gap:            8px;
+}
+
+.toc-link {
+    font-family: var(--font-main);
+    font-weight: 500;
+    font-size:   var(--fs-body);
+    line-height: var(--lh-body);
+    color:       var(--color-text-secondary);
+    transition:  color 0.15s ease, padding-left 0.15s ease;
+}
+
+.toc-link:hover {
+    color: var(--color-msp-blue);
+}
+
+.toc-link.is-active {
+    color:        var(--color-msp-blue);
+    font-weight:  700;
+    padding-left: 4px;
+}
+
+/* ───────────────────────────────────────────────
+5. Chapter Header
+───────────────────────────────────────────────*/
+.chapter {
+    display:           flex;
+    flex-direction:    column;
+    gap:               40px;
+    scroll-margin-top: 32px;
+}
+
+.chapter-header {
+    display:        flex;
+    flex-direction: column;
+    gap:            8px;
+}
+
+.chapter-icon {
+    width:         32px;
+    height:        32px;
+    margin-bottom: 4px;
+}
+
+.chapter-eyebrow {
+    font-family:    var(--font-main);
+    font-weight:    700;
+    font-size:      var(--fs-eyebrow);
+    letter-spacing: -0.22px;
+    text-transform: uppercase;
+    color:          var(--color-msp-blue);
+}
+
+.chapter-title {
+    font-family: var(--font-main);
+    font-weight: 700;
+    font-size:   var(--fs-h2);
+    line-height: var(--lh-h2);
+    color:       var(--color-dark-blue);
+}
+
+.chapter-intro {
+    font-family: var(--font-main);
+    font-weight: 500;
+    font-size:   var(--fs-body);
+    line-height: var(--lh-body);
+    max-width:   780px;
+}
+
+/* ───────────────────────────────────────────────
+6. Text Blocks / Paragraphs
+───────────────────────────────────────────────*/
+.text-block {
+    display:           flex;
+    flex-direction:    column;
+    gap:               16px;
+    scroll-margin-top: 32px;
+}
+
+.text-block-title {
+    font-family: var(--font-main);
+    font-weight: 700;
+    font-size:   var(--fs-h3);
+    line-height: var(--lh-h3);
+    color:       var(--color-dark-blue);
+}
+
+.text-block p {
+    font-family: var(--font-main);
+    font-weight: 500;
+    font-size:   var(--fs-body);
+    line-height: var(--lh-body);
+}
+
+.text-block p + p {
+    margin-top: 16px;
+}
+
+.text-block strong {
+    color:       var(--color-dark-blue);
+    font-weight: 700;
+}
+
+/* ───────────────────────────────────────────────
+7. Code Blocks
+───────────────────────────────────────────────*/
+.code-block-group {
+    display:        flex;
+    flex-direction: column;
+    gap:            20px;
+}
+
+.code-block {
+    display:        flex;
+    flex-direction: column;
+    gap:            8px;
+}
+
+.code-block-label {
+    font-family: var(--font-main);
+    font-weight: 700;
+    font-size:   var(--fs-label);
+    color:       var(--color-dark-blue);
+}
+
+.copy-paste-code {
+    position:      relative;
+    background:    var(--color-code-bg);
+    border:        1px solid var(--color-border-subtle);
+    border-radius: var(--radius-sm);
+    padding:       16px;
+}
+
+.copy-paste-code pre {
+    font-family:   var(--font-main);
+    font-weight:   500;
+    font-size:     var(--fs-body);
+    line-height:   var(--lh-body);
+    color:         var(--color-code-text);
+    white-space:   pre-wrap;
+    word-break:    break-word;
+    padding-right: 48px;
+}
+
+.clipboard-btn {
+    position:        absolute;
+    top:             15px;
+    right:           16px;
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+    width:           34px;
+    height:          34px;
+    padding:         7px;
+    background:      var(--color-clipboard-bg);
+    border:          1px solid var(--color-clipboard-border);
+    border-radius:   5px;
+    cursor:          pointer;
+    color:           var(--color-msp-blue);
+    transition:      background 0.15s ease;
+}
+
+.clipboard-btn:hover {
+    background: var(--color-clipboard-border);
+}
+
+.clipboard-btn svg {
+    width:  20px;
+    height: 20px;
+}
+
+.clipboard-btn.is-copied::after {
+    content:       'Copied!';
+    position:      absolute;
+    top:           -30px;
+    right:         0;
+    background:    var(--color-dark-blue);
+    color:         #fff;
+    font-family:   var(--font-main);
+    font-size:     0.75rem;
+    font-weight:   600;
+    padding:       4px 8px;
+    border-radius: 4px;
+    white-space:   nowrap;
+}
+
+/* ───────────────────────────────────────────────
+8. Image Guidelines List
+───────────────────────────────────────────────*/
+.guideline-list {
+    display:        flex;
+    flex-direction: column;
+    gap:            20px;
+}
+
+.guideline-item {
+    display:     flex;
+    gap:         8px;
+    align-items: flex-start;
+}
+
+.guideline-badge {
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+    flex-shrink:     0;
+    width:           41px;
+    height:          41px;
+    border:          1.5px solid var(--color-msp-blue);
+    border-radius:   var(--radius-full);
+    font-family:     var(--font-main);
+    font-weight:     700;
+    font-size:       var(--fs-badge);
+    letter-spacing:  -0.16px;
+    color:           var(--color-msp-blue);
+}
+
+.guideline-body {
+    flex:           1 1 0;
+    min-width:      0;
+    display:        flex;
+    flex-direction: column;
+    gap:            8px;
+}
+
+.guideline-body p {
+    font-family: var(--font-main);
+    font-weight: 500;
+    font-size:   var(--fs-body);
+    line-height: var(--lh-body);
+}
+
+.guideline-body ol {
+    list-style:   decimal;
+    padding-left: 24px;
+}
+
+/* ───────────────────────────────────────────────
+9. Icon Chips
+───────────────────────────────────────────────*/
+.icon-row {
+    display:     flex;
+    gap:         33px;
+    align-items: center;
+    flex-wrap:   wrap;
+}
+
+.icon-chip {
+    position:        relative;
+    width:           58px;
+    height:          58px;
+    border-radius:   var(--radius-xs);
+    background:      linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), var(--gradient-icon-chip);
+    box-shadow:      inset 3px 4px 2px 0 rgba(255, 255, 255, 0.25), inset 0 -3px 4px 0 rgba(0, 0, 0, 0.11);
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+}
+
+.icon-chip img {
+    width:  32px;
+    height: 32px;
+}
+
+/* ───────────────────────────────────────────────
+10. Responsive Settings
+───────────────────────────────────────────────*/
+@media screen and (max-width: 992px) {
+    .hero-cards-row {
+        flex-wrap: wrap;
+        margin:    32px 0 0;
+        padding:   0;
+    }
+
+    .hero-card-placeholder {
+        flex-basis: calc(50% - 17px);
+    }
+
+    .toc {
+        position:   static;
+        max-height: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero-card {
+        padding: 32px;
+    }
+
+    .hero-cards-row {
+        gap: 16px;
+    }
+
+    .hero-card-placeholder {
+        flex-basis: 100%;
+        height:     180px;
+    }
+
+    .header-bar {
+        flex-wrap: wrap;
+        gap:       12px;
+    }
+}
+
+@media screen and (max-width: 567px) {
+    .icon-row {
+        gap: 16px;
+    }
+
+    .guideline-item {
+        flex-direction: column;
+    }
+}

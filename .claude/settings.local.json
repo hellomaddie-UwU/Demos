@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la \"/Users/biancamaddela/Documents/hellomaddie 2026/Demos/.claude\" 2>/dev/null; echo \"---\"; mkdir -p \"/Users/biancamaddela/Documents/hellomaddie 2026/Demos/.claude\")"
+    ]
+  }
+}

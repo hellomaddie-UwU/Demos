@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__14e70c09-da7a-417c-92f3-d369e6c29446__get_metadata",
+      "mcp__14e70c09-da7a-417c-92f3-d369e6c29446__get_design_context",
+      "mcp__14e70c09-da7a-417c-92f3-d369e6c29446__get_screenshot"
+    ]
+  }
+}

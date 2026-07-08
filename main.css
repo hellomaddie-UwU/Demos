@@ -1,0 +1,172 @@
+/* ───────────────────────────────────────────────
+    TABLE OF CONTENTS
+    1. Global Settings 
+    2. Primitive Tokens
+        2.A. Color Palettes
+        2.B. Typography Tokens
+        2.C. Spacing Tokens
+    3. CSS Variables - Design Tokens
+        2.A. Spacing Scale
+    4. Page Layout
+    5. Typography
+    6. Responsive Settings
+───────────────────────────────────────────────*/
+
+/* ───────────────────────────────────────────────
+Global Settings
+───────────────────────────────────────────────*/
+* {
+    margin:     0;
+    padding:    0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x:  hidden;
+    overflow-x:  clip;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*Import*/
+@font-face {
+    font-family: 'Hello Radio';
+    src:          url(Hello\ Radio.ttf);
+}
+
+
+:root {
+    /* ───────────────────────────────────────────────
+    Primitive Tokens > Color Palettes
+    ───────────────────────────────────────────────*/
+    --page-bg:      #fbf7fe;
+    --card-surface: #ffffff;
+    --border:       rgba(0, 0, 0, 0.08);
+    --border-hover: rgba(209, 127, 243, 0.5);
+
+    /*Buttons*/
+    --accent:    #A12ECB; 
+    --accent-dim:rgba(161, 46, 203, 0.5); 
+
+    /*Text*/
+    --text-primary:#293056; 
+    --text-body:   #3E4784; 
+    --text-muted:  #aeaec3; /*placeholder text*/
+    
+    /* ───────────────────────────────────────────────
+    Primitive Tokens > Typography Tokens
+    ───────────────────────────────────────────────*/
+    --font-sans:    'Poppins';
+    --font-script:  'Hello Radio';
+    /*--font-mono:  for coding if ever I finally need it :)*/
+    
+    --text-xs:   0.75rem;    /* 12px */
+    --text-sm:   0.875rem;   /* 14px */
+    --text-base: 1rem;       /* 16px */
+    --text-md:   1.125rem;   /* 18px */
+    --text-lg:   1.25rem;    /* 20px */
+    --text-xl:   1.5rem;     /* 24px */
+    --text-2xl:  1.875rem;   /* 30px */
+    --text-3xl:  2.25rem;    /* 36px */
+    --text-4xl:  3rem;       /* 48px */
+
+    --font-weight-light:    300;
+    --font-weight-regular:  400;
+    --font-weight-medium:   500;
+    --font-weight-semibold: 600;
+    --font-weight-bold:     700;
+
+    /* ───────────────────────────────────────────────
+    Primitive Tokens > Spacing Tokens
+    ───────────────────────────────────────────────*/
+    --space-0:  0px;
+    --space-1:  4px;
+    --space-2:  8px;
+    --space-3:  12px;
+    --space-4:  16px;
+    --space-5:  20px;
+    --space-6:  24px;
+    --space-7:  32px;
+    --space-8:  40px;
+    --space-9:  48px;
+    --space-10: 64px;
+    --space-11: 80px;
+    --space-12: 96px;
+
+    /* ───────────────────────────────────────────────
+    Primitive Tokens > Border Radius
+    ───────────────────────────────────────────────*/
+    --radius-sm:   12px;
+    --radius-full: 999px;
+}
+
+/* ───────────────────────────────────────────────
+CSS Variables - Design Tokens
+───────────────────────────────────────────────*/
+/*Spacing Scale START*/
+    .space-0  {gap:var(--space-0);}
+    .space-1  {gap:var(--space-1);}
+    .space-2  {gap:var(--space-2);}
+    .space-3  {gap:var(--space-3);}
+    .space-4  {gap:var(--space-4);}
+    .space-5  {gap:var(--space-5);}
+    .space-6  {gap:var(--space-6);}
+    .space-7  {gap:var(--space-7);}
+    .space-8  {gap:var(--space-8);}  
+    .space-9  {gap:var(--space-9);}
+    .space-10 {gap:var(--space-10);}
+    .space-11 {gap:var(--space-11);}
+    .space-12 {gap:var(--space-12);}
+/*Spacing Scale END*/
+
+/* ───────────────────────────────────────────────
+Page Layout
+───────────────────────────────────────────────*/
+body {
+    width:            100%;
+    padding-left:     5%;
+    padding-right:    5%;
+    background-color: var(--page-bg);
+}
+
+/* ───────────────────────────────────────────────
+Typography
+───────────────────────────────────────────────*/
+.display-text {
+    font-family: var(--font-script);
+    font-size:   60px;
+    line-height: 40px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color:         var(--text-primary);
+    margin-bottom: var(--space-0);
+}
+
+h6 {
+    font-size:   var(--text-lg);
+    line-height: 28px;
+    font-weight: var(--font-weight-semibold);
+}
+
+p {
+    color:         var(--text-body);
+    font-family:   var(--font-sans);
+    margin-bottom: var(--space-0);
+}
+
+/* ───────────────────────────────────────────────
+Responsive Settings
+───────────────────────────────────────────────*/
+@media screen and (min-width: 1920px) {}
+
+/*Widescreen*/ /*xxl*/
+@media screen and (min-width: 1440px) {}
+
+/*Tablet LG START*/ /*lg*/
+@media screen and (max-width: 992px) {}
+
+/*Tablet*/ /*md*/
+@media screen and (max-width: 768px) {}
+
+/*Mobile*/ /*sm*/
+@media screen and (max-width: 567px) {}

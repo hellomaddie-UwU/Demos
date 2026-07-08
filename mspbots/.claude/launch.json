@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "mspbots-static",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-c", "npx serve -l $PORT ."],
+      "port": 4173,
+      "autoPort": true
+    }
+  ]
+}
