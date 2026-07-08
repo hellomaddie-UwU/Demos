@@ -16,9 +16,9 @@
 1. Site Header
 ───────────────────────────────────────────────*/
 .site-header {
-    position:    relative;
-    z-index:     2;
-    padding-top: 20px;
+    position: relative;
+    z-index:  2;
+    padding:  20px 6%;
 }
 
 .header-bar {
@@ -28,15 +28,15 @@
 }
 
 .logo img {
-    height: 50px;
+    height: 48px;
     width:  auto;
 }
 
 .version-tag {
-    font-family: var(--font-main);
-    font-weight: 600;
-    font-size:   var(--fs-body);
-    color:       var(--color-msp-blue);
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-semibold);
+    font-size:   var(--text-base);
+    color:       var(--mspbots-blue);
 }
 
 /* ───────────────────────────────────────────────

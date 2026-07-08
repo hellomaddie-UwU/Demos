@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg">
+        <!--SEO START-->
+        <title>Vyepti Web App Demo | hellomaddie</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+
+        <!-- Universal Open Graph -->
+        <meta property="og:title" content="">
+        <meta property="og:description" content="">
+        <meta property="og:image" content=""> <!-- Replace with actual image URL: 1200×630px -->
+        <meta property="og:image:alt" content="">
+        <meta property="og:url" content="#"> <!-- Needs to be the official URL -->
+        <meta property="og:type" content="website">
+
+        <!-- Twitter/X Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="">
+        <meta name="twitter:description" content="">
+        <meta name="twitter:image" content=""> <!-- Replace with actual image URL: 1200×630px -->
+        <!--SEO END-->
+
+        <!--Stylesheet START-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="main.css" rel="stylesheet">
+        <link href="app.css" rel="stylesheet">
+        <link href="vyepti-components.css" rel="stylesheet">
+        <!--Stylesheet END-->
+
+        <!--Fonts START-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+        <!--Fonts END-->
+    </head>
+
+    <body>
+        <div class="vy-shell" id="vyShell">
+            <img class="vy-bg-shapes" src="assets/icons/bg-shapes.svg" alt="">
+
+            <!-- Sidebar -->
+            <aside class="vy-sidebar">
+                <div class="vy-user">
+                    <img class="vy-user__pic" src="assets/icons/profile-pic.svg" alt="">
+                    <span class="vy-user__name">Hello, Martha</span>
+                </div>
+
+                <nav class="vy-nav">
+                    <div class="vy-nav__group">
+                        <p class="vy-nav__label">Dashboard</p>
+                        <ul class="vy-nav__list">
+                            <li class="active"><a href="dashboard.html" aria-current="page">Home</a></li>
+                            <li><a href="calendar-overview.html">Calendar Overview</a></li>
+                            <li><a href="patient-directory.html">Patient Directory</a></li>
+                            <li><a href="about-vyepti.html">About Vyepti</a></li>
+                        </ul>
+                    </div>
+                    <div class="vy-nav__group">
+                        <p class="vy-nav__label">Forms</p>
+                        <ul class="vy-nav__list">
+                            <li><a href="power-on-treatment.html">Power-On Treatment</a></li>
+                            <li><a href="infusion-appointment.html">Infusion Appointment</a></li>
+                        </ul>
+                    </div>
+                    <a class="vy-nav__settings" href="settings.html">Settings</a>
+                </nav>
+            </aside>
+
+            <div class="vy-main">
+                <!-- Topbar -->
+                <header class="vy-topbar">
+                    <button class="vy-topbar__menu" id="sidebarToggle" type="button" aria-label="Toggle sidebar" aria-controls="vyShell" aria-expanded="true">
+                        <img src="assets/icons/menu.svg" alt="" width="20" height="20">
+                    </button>
+
+                    <img class="vy-topbar__logo" src="assets/icons/logo.svg" alt="Vyepti">
+
+                    <div class="vy-topbar__actions">
+                        <button class="vy-topbar__bell position-relative" type="button" aria-label="Notifications">
+                            <img src="assets/icons/bell.svg" alt="" width="20" height="20">
+                            <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+                                <span class="visually-hidden">New notifications</span>
+                            </span>
+                        </button>
+                        <a class="d-flex align-items-center gap-1" href="login.html" style="color: var(--vy-blue); font-family: var(--font-heading); font-weight: 600; font-size: 14px;">
+                            <img src="assets/icons/log-out.svg" alt="" width="20" height="20">
+                            Log out
+                        </a>
+                    </div>
+                </header>
+
+                <!-- Content -->
+                <div class="vy-content">
+                    <main class="vy-page">
+                        <div class="vy-breadcrumb">
+                            <img src="assets/icons/home.svg" alt="">
+                            <span>Home</span>
+                        </div>
+
+                        <h1 class="vy-date">18 October 2021, Monday</h1>
+
+                        <div class="row g-4">
+                            <div class="col-12 col-md-6">
+                                <div class="vy-feature-card">
+                                    <img class="vy-feature-card__icon" src="assets/icons/icon-efficacious-lg.svg" alt="">
+                                    <div class="vy-feature-card__body">
+                                        <div>
+                                            <p class="vy-feature-card__title">Vyepti Power-on Treatment Plan</p>
+                                            <p class="vy-feature-card__text">A treatment plan for your patients to be started on the right treatment, stay on track, and to take control of their migraine as long as possible!</p>
+                                        </div>
+                                        <a class="vy-btn" href="power-on-treatment.html">Enroll Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="vy-feature-card">
+                                    <img class="vy-feature-card__icon" src="assets/icons/icon-infusion.svg" alt="">
+                                    <div class="vy-feature-card__body">
+                                        <div>
+                                            <p class="vy-feature-card__title">Infusion Appointment</p>
+                                            <p class="vy-feature-card__text">Book a 30 minute hassle-free infusion service with our professional nurse agency team at the preferred date and time of your patient.</p>
+                                        </div>
+                                        <a class="vy-btn" href="infusion-appointment.html">Book Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <section class="vy-calendar-panel">
+                            <div class="vy-calendar-panel__header">
+                                <h2>Calendar Overview</h2>
+                                <button class="vy-btn" type="button" data-bs-toggle="modal" data-bs-target="#addAppointmentModal">Add New Appointment</button>
+                            </div>
+
+                            <div class="vy-calendar-panel__controls">
+                                <div class="dropdown">
+                                    <button class="vy-select" type="button" id="monthDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span id="monthDropdownLabel">This Month</span>
+                                        <img src="assets/icons/chevron-down.svg" alt="">
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="monthDropdown">
+                                        <li><button class="dropdown-item" type="button">Last Month</button></li>
+                                        <li><button class="dropdown-item" type="button">This Month</button></li>
+                                        <li><button class="dropdown-item" type="button">Next Month</button></li>
+                                    </ul>
+                                </div>
+
+                                <div class="vy-legend">
+                                    <span class="vy-legend__label">Legend:</span>
+                                    <span class="vy-legend__item"><span class="vy-dot vy-dot--pending"></span>Pending</span>
+                                    <span class="vy-legend__item"><span class="vy-dot vy-dot--accepted"></span>Accepted</span>
+                                    <span class="vy-legend__item"><span class="vy-dot vy-dot--completed"></span>Completed</span>
+                                </div>
+                            </div>
+
+                            <div class="vy-calendar">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Monday</th>
+                                            <th>Tuesday</th>
+                                            <th>Wednesday</th>
+                                            <th>Thursday</th>
+                                            <th>Friday</th>
+                                            <th>Saturday</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><span class="vy-calendar__day vy-calendar__day--muted">27</span></td>
+                                            <td><span class="vy-calendar__day vy-calendar__day--muted">28</span></td>
+                                            <td><span class="vy-calendar__day vy-calendar__day--muted">29</span></td>
+                                            <td><span class="vy-calendar__day vy-calendar__day--muted">30</span></td>
+                                            <td><span class="vy-calendar__day">1</span></td>
+                                            <td>
+                                                <span class="vy-calendar__day">2</span>
+                                                <ul class="vy-calendar__events">
+                                                    <li class="vy-calendar__event"><span class="vy-dot vy-dot--pending"></span><strong>09:30 AM</strong>&nbsp;- Patie...</li>
+                                                    <li class="vy-calendar__event"><span class="vy-dot vy-dot--accepted"></span><strong>11:00 AM</strong>&nbsp;- Patie...</li>
+                                                    <li><button class="vy-calendar__see-more" type="button" data-bs-toggle="popover" data-bs-title="Oct 2 appointments" data-bs-content="09:30 AM — Patient Name, Pending. 11:00 AM — Patient Name, Accepted." data-bs-trigger="focus">See More</button></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="vy-calendar__day">4</span></td>
+                                            <td>
+                                                <span class="vy-calendar__day">5</span>
+                                                <ul class="vy-calendar__events">
+                                                    <li class="vy-calendar__event"><span class="vy-dot vy-dot--pending"></span><strong>09:30 AM</strong>&nbsp;- Patie...</li>
+                                                    <li class="vy-calendar__event"><span class="vy-dot vy-dot--completed"></span><strong>11:00 AM</strong>&nbsp;- Patie...</li>
+                                                    <li><button class="vy-calendar__see-more" type="button" data-bs-toggle="popover" data-bs-title="Oct 5 appointments" data-bs-content="09:30 AM — Patient Name, Pending. 11:00 AM — Patient Name, Completed." data-bs-trigger="focus">See More</button></li>
+                                                </ul>
+                                            </td>
+                                            <td><span class="vy-calendar__day">6</span></td>
+                                            <td><span class="vy-calendar__day">7</span></td>
+                                            <td>
+                                                <span class="vy-calendar__day">8</span>
+                                                <ul class="vy-calendar__events">
+                                                    <li class="vy-calendar__event"><span class="vy-dot vy-dot--pending"></span><strong>09:30 AM</strong>&nbsp;- Patie...</li>
+                                                    <li class="vy-calendar__event"><span class="vy-dot vy-dot--accepted"></span><strong>11:00 AM</strong>&nbsp;- Patie...</li>
+                                                    <li><button class="vy-calendar__see-more" type="button" data-bs-toggle="popover" data-bs-title="Oct 8 appointments" data-bs-content="09:30 AM — Patient Name, Pending. 11:00 AM — Patient Name, Accepted." data-bs-trigger="focus">See More</button></li>
+                                                </ul>
+                                            </td>
+                                            <td><span class="vy-calendar__day">9</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="vy-calendar__day">11</span></td>
+                                            <td><span class="vy-calendar__day">12</span></td>
+                                            <td>
+                                                <span class="vy-calendar__day">13</span>
+                                                <ul class="vy-calendar__events">
+                                                    <li class="vy-calendar__event"><span class="vy-dot vy-dot--completed"></span><strong>09:30 AM</strong>&nbsp;- Patie...</li>
+                                                    <li class="vy-calendar__event"><span class="vy-dot vy-dot--pending"></span><strong>11:00 AM</strong>&nbsp;- Patie...</li>
+                                                    <li><button class="vy-calendar__see-more" type="button" data-bs-toggle="popover" data-bs-title="Oct 13 appointments" data-bs-content="09:30 AM — Patient Name, Completed. 11:00 AM — Patient Name, Pending." data-bs-trigger="focus">See More</button></li>
+                                                </ul>
+                                            </td>
+                                            <td><span class="vy-calendar__day">14</span></td>
+                                            <td><span class="vy-calendar__day">15</span></td>
+                                            <td><span class="vy-calendar__day">16</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="vy-calendar__day fw-bold" style="color: var(--vy-blue);">18</span>
+                                                <ul class="vy-calendar__events">
+                                                    <li class="vy-calendar__event"><span class="vy-dot vy-dot--pending"></span><strong>09:30 AM</strong>&nbsp;- Patie...</li>
+                                                    <li class="vy-calendar__event"><span class="vy-dot vy-dot--accepted"></span><strong>11:00 AM</strong>&nbsp;- Patie...</li>
+                                                    <li><button class="vy-calendar__see-more" type="button" data-bs-toggle="popover" data-bs-title="Oct 18 appointments" data-bs-content="09:30 AM — Patient Name, Pending. 11:00 AM — Patient Name, Accepted." data-bs-trigger="focus">See More</button></li>
+                                                </ul>
+                                            </td>
+                                            <td><span class="vy-calendar__day">19</span></td>
+                                            <td><span class="vy-calendar__day">20</span></td>
+                                            <td>
+                                                <span class="vy-calendar__day">21</span>
+                                                <ul class="vy-calendar__events">
+                                                    <li class="vy-calendar__event"><span class="vy-dot vy-dot--accepted"></span><strong>09:30 AM</strong>&nbsp;- Patie...</li>
+                                                    <li class="vy-calendar__event"><span class="vy-dot vy-dot--completed"></span><strong>11:00 AM</strong>&nbsp;- Patie...</li>
+                                                    <li><button class="vy-calendar__see-more" type="button" data-bs-toggle="popover" data-bs-title="Oct 21 appointments" data-bs-content="09:30 AM — Patient Name, Accepted. 11:00 AM — Patient Name, Completed." data-bs-trigger="focus">See More</button></li>
+                                                </ul>
+                                            </td>
+                                            <td>
+                                                <span class="vy-calendar__day">22</span>
+                                                <ul class="vy-calendar__events">
+                                                    <li class="vy-calendar__event"><span class="vy-dot vy-dot--pending"></span><strong>09:30 AM</strong>&nbsp;- Patie...</li>
+                                                    <li class="vy-calendar__event"><span class="vy-dot vy-dot--pending"></span><strong>11:00 AM</strong>&nbsp;- Patie...</li>
+                                                    <li><button class="vy-calendar__see-more" type="button" data-bs-toggle="popover" data-bs-title="Oct 22 appointments" data-bs-content="09:30 AM — Patient Name, Pending. 11:00 AM — Patient Name, Pending." data-bs-trigger="focus">See More</button></li>
+                                                </ul>
+                                            </td>
+                                            <td><span class="vy-calendar__day">23</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="vy-calendar__day">25</span></td>
+                                            <td><span class="vy-calendar__day">26</span></td>
+                                            <td><span class="vy-calendar__day">27</span></td>
+                                            <td><span class="vy-calendar__day">28</span></td>
+                                            <td><span class="vy-calendar__day">29</span></td>
+                                            <td><span class="vy-calendar__day">30</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <footer class="vy-footer">© 2021 Lundbeck. All rights reserved.</footer>
+                    </main>
+
+                    <aside class="vy-side-panels">
+                        <div class="vy-notifications">
+                            <p class="vy-notifications__title">Notifications</p>
+
+                            <div class="vy-notif-group">
+                                <p class="vy-notif-group__day">Today</p>
+                                <ul>
+                                    <li class="vy-notif-item">
+                                        <span class="vy-dot vy-dot--pending vy-notif-item__dot"></span>
+                                        <div>
+                                            <p class="vy-notif-item__text"><strong>Patient Name</strong> accepted booking invite.</p>
+                                            <span class="vy-notif-item__time">9 mins ago</span>
+                                        </div>
+                                    </li>
+                                    <li class="vy-notif-item">
+                                        <span class="vy-dot vy-dot--accepted vy-notif-item__dot"></span>
+                                        <div>
+                                            <p class="vy-notif-item__text"><strong>Patient Name</strong> missed their 12 PM appointment.</p>
+                                            <span class="vy-notif-item__time">1:00 PM</span>
+                                        </div>
+                                    </li>
+                                    <li class="vy-notif-item">
+                                        <span class="vy-dot vy-dot--pending vy-notif-item__dot"></span>
+                                        <div>
+                                            <p class="vy-notif-item__text"><strong>Patient Name</strong> has successfully administered their first treatment.</p>
+                                            <span class="vy-notif-item__time">3:30 PM</span>
+                                        </div>
+                                    </li>
+                                    <li class="vy-notif-item">
+                                        <span class="vy-dot vy-dot--pending vy-notif-item__dot"></span>
+                                        <div>
+                                            <p class="vy-notif-item__text"><strong>Patient Name</strong> accepted booking invite.</p>
+                                            <span class="vy-notif-item__time">4:15 PM</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="vy-notif-group">
+                                <p class="vy-notif-group__day">Oct 17, 2021</p>
+                                <ul>
+                                    <li class="vy-notif-item">
+                                        <span class="vy-dot vy-dot--accepted vy-notif-item__dot"></span>
+                                        <div>
+                                            <p class="vy-notif-item__text"><strong>Patient Name</strong> missed their 10 AM appointment.</p>
+                                            <span class="vy-notif-item__time">10:05 PM</span>
+                                        </div>
+                                    </li>
+                                    <li class="vy-notif-item">
+                                        <span class="vy-dot vy-dot--pending vy-notif-item__dot"></span>
+                                        <div>
+                                            <p class="vy-notif-item__text"><strong>Patient Name</strong> has successfully administered their first treatment.</p>
+                                            <span class="vy-notif-item__time">3:30 PM</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="vy-learnmore">
+                            <p class="vy-learnmore__title">Learn More About Vyepti</p>
+
+                            <div class="vy-learnmore__item">
+                                <img class="vy-learnmore__icon" src="assets/icons/icon-efficacious-sm.svg" alt="">
+                                <div>
+                                    <p class="vy-learnmore__item-title">Efficacious</p>
+                                    <p class="vy-learnmore__item-text">Lorem ipsum dolor sit amet consectetur.</p>
+                                </div>
+                            </div>
+                            <div class="vy-learnmore__item">
+                                <img class="vy-learnmore__icon" src="assets/icons/icon-fast.svg" alt="">
+                                <div>
+                                    <p class="vy-learnmore__item-title">Fast</p>
+                                    <p class="vy-learnmore__item-text">Lorem ipsum dolor sit amet consectetur.</p>
+                                </div>
+                            </div>
+                            <div class="vy-learnmore__item">
+                                <img class="vy-learnmore__icon" src="assets/icons/icon-sustained.svg" alt="">
+                                <div>
+                                    <p class="vy-learnmore__item-title">Sustained</p>
+                                    <p class="vy-learnmore__item-text">Lorem ipsum dolor sit amet consectetur.</p>
+                                </div>
+                            </div>
+
+                            <a class="vy-btn" href="about-vyepti.html">Visit About Us</a>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add New Appointment (demo-only modal) -->
+        <div class="modal fade" id="addAppointmentModal" tabindex="-1" aria-labelledby="addAppointmentModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addAppointmentModalLabel" style="font-family: var(--font-heading); color: var(--vy-blue);">Add New Appointment</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="text-muted mb-0">This is a demo — appointment booking isn't wired up yet.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="vy-btn vy-btn--sm" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Bootstrap JS START-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            document.getElementById('sidebarToggle').addEventListener('click', function () {
+                var shell = document.getElementById('vyShell');
+                var collapsed = shell.classList.toggle('vy-sidebar-collapsed');
+                this.setAttribute('aria-expanded', String(!collapsed));
+            });
+
+            document.querySelectorAll('[data-bs-toggle="popover"]').forEach(function (el) {
+                new bootstrap.Popover(el);
+            });
+
+            var monthLabel = document.getElementById('monthDropdownLabel');
+            document.querySelectorAll('#monthDropdown + .dropdown-menu .dropdown-item').forEach(function (item) {
+                item.addEventListener('click', function () {
+                    monthLabel.textContent = this.textContent;
+                });
+            });
+        </script>
+        <!--Bootstrap JS END-->
+    </body>
+</html>

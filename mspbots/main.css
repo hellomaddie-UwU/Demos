@@ -30,7 +30,7 @@ body {
     /* ───────────────────────────────────────────────
     Primitive Tokens > Color Palettes
     ───────────────────────────────────────────────*/
-    --page-bg:      #f8f8f9; /*regular sections*/
+    --page-bg:      #f8f8f9; /*regular sections*/ 
     --page-dark-bg: #100a2a; /*dark-themed sections*/
     --dark-surface: #1b1146; /*on nav bar, footer, buttons, and cards*/
     --card-border:    1.5px solid rgba(0, 0, 0, 0.15);

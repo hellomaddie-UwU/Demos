@@ -1,6 +1,6 @@
 /* ───────────────────────────────────────────────
     TABLE OF CONTENTS
-    1. Global Settings 
+    1. Global Settings
     2. Primitive Tokens
         2.A. Color Palettes
         2.B. Typography Tokens
@@ -24,38 +24,147 @@ Global Settings
 html, body {
     overflow-x:  hidden;
     overflow-x:  clip;
-    /*font-family: 'Raleway', sans-serif;*/
+    font-family: 'Barlow', sans-serif;
+    color:       var(--color-body-text);
+    background:  var(--color-white);
+}
+
+a {
+    color:           inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+    cursor:      pointer;
+}
+
+img {
+    max-width: 100%;
+    display:   block;
+}
+
+ul {
+    list-style: none;
 }
 
 :root {
     /* ───────────────────────────────────────────────
     Primitive Tokens > Color Palettes
     ───────────────────────────────────────────────*/
+    --white:              #FFFFFF;
+    --off-white:          #F7F7F7;
+    --gray-6:             #F2F2F2;
+    --gray-5:             #E0E0E0;
 
-        /* ───────────────────────────────────────────────
+    /* UR Green scale (0% = base brand green, positive % = darker shades, negative % = lighter tints) */
+    --ur-green-90:        #121510;
+    --ur-green-80:        #252B1F;
+    --ur-green-60:        #41564D;
+    --ur-green-40:        #6E805E;
+    --ur-green-20:        #92AB7E;
+    --ur-green:           #B7D69E;
+    --ur-green-tint-20:   #C7DFB3;
+    --ur-green-tint-40:   #D7E8C9;
+    --ur-green-tint-60:   #E5F1DF;
+    --ur-green-tint-80:   #F1F7EB;
+
+    /* UR Gray Blue scale */
+    --ur-gray-blue:       #5A88A3;
+    --ur-gray-blue-20:    #7BA0B5;
+
+    --heading-color:      #31302F;
+    --body-color:         #62605E;
+
+    /* ───────────────────────────────────────────────
     Primitive Tokens > Typography Token
     ───────────────────────────────────────────────*/
+    --font-body:          'Barlow', sans-serif;
+    --font-heading:       'Barlow Semi Condensed', sans-serif;
+
+    --fs-h02:             44px; /* hero headline */
+    --lh-h02:             45px;
+    --fs-h03:             39px; /* section headline */
+    --lh-h03:             38px;
+    --fs-h05:             24px; /* eyebrow / card title */
+    --lh-h05:             23px;
+    --fs-h06:             18px; /* nav links / mega menu titles */
+
+    --fs-body-01:         18px;
+    --lh-body-01:         23.2px;
+    --fs-body-02:         16px;
+    --lh-body-02:         23.2px;
+    --fs-caption:         14px;
+    --lh-caption:         17.7px;
 
     /* ───────────────────────────────────────────────
     Primitive Tokens > Spacing Tokens
     ───────────────────────────────────────────────*/
+    --space-1:  4px;
+    --space-2:  8px;
+    --space-3:  12px;
+    --space-4:  16px;
+    --space-5:  20px;
+    --space-6:  24px;
+    --space-7:  32px;
+    --space-8:  40px;
+    --space-9:  48px;
+    --space-10: 64px;
+    --space-11: 96px;
 
     /* ───────────────────────────────────────────────
     Primitive Tokens > Border Radius
     ───────────────────────────────────────────────*/
+    --radius-sm:   4px;
+    --radius-md:   8px;
+    --radius-lg:   16px;
+    --radius-full: 999px;
 }
 
 /* ───────────────────────────────────────────────
 CSS Variables - Design Tokens
 ───────────────────────────────────────────────*/
+:root {
+    --color-heading-text:  var(--heading-color);
+    --color-body-text:     var(--body-color);
+    --color-brand-dark:    var(--ur-green-60);
+    --color-brand-darkest: var(--ur-green-80);
+    --color-brand-accent:  var(--ur-gray-blue);
+    --shadow-ur:           0 4px 14px rgba(137, 167, 121, 0.4);
+}
 
 /* ───────────────────────────────────────────────
 Page Layout
 ───────────────────────────────────────────────*/
+.container {
+    width: 100%;
+}
 
 /* ───────────────────────────────────────────────
 Typography
 ───────────────────────────────────────────────*/
+h1, h2, h3, h4, h5, h6 {
+    font-family:   var(--font-heading);
+    font-weight:   500;
+    color:         var(--color-heading-text);
+    margin-bottom: 0;
+}
+
+p {
+    font-family:   var(--font-body);
+    font-weight:   400;
+    color:         var(--color-body-text);
+    margin-bottom: 0;
+}
+
+.eyebrow {
+    font-family:    var(--font-heading);
+    font-weight:    500;
+    font-size:      var(--fs-h05);
+    line-height:    var(--lh-h05);
+    color:          var(--color-brand-accent);
+    margin-bottom:  var(--space-2);
+}
 
 /* ───────────────────────────────────────────────
 Responsive Settings
@@ -66,10 +175,24 @@ Responsive Settings
 @media screen and (min-width: 1440px) {}
 
 /*Tablet LG START*/ /*lg*/
-@media screen and (max-width: 992px) {}
+@media screen and (max-width: 992px) {
+    :root {
+        --fs-h02: 36px;
+        --lh-h02: 40px;
+        --fs-h03: 32px;
+        --lh-h03: 34px;
+    }
+}
 
 /*Tablet*/ /*md*/
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+    :root {
+        --fs-h02: 30px;
+        --lh-h02: 36px;
+        --fs-h03: 28px;
+        --lh-h03: 32px;
+    }
+}
 
 /*Mobile*/ /*sm*/
 @media screen and (max-width: 567px) {}

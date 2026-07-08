@@ -8,7 +8,13 @@
       "Bash(python3 -c ' *)",
       "Read(//tmp/**)",
       "mcp__14e70c09-da7a-417c-92f3-d369e6c29446__whoami",
-      "Bash(grep -n \"aspect-ratio: auto\\\\|^}$\" \"/Users/biancamaddela/Documents/hellomaddie 2026/Demos/mspbots/mspbots-components.css\")"
+      "Bash(grep -n \"aspect-ratio: auto\\\\|^}$\" \"/Users/biancamaddela/Documents/hellomaddie 2026/Demos/mspbots/mspbots-components.css\")",
+      "Bash(awk -F'/' '{print $1\"/\"$2\"/\"$3}')",
+      "Bash(awk -F'/' '{print $1}')",
+      "Bash(git checkout *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(gh pr create --title 'Fix broken images on GitHub Pages with relative image paths' --body ' *)"
     ]
   }
 }

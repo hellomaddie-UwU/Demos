@@ -1,0 +1,19 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 68.9663 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="efficacious">
+<path id="Vector" d="M44.3175 4.36595C44.6435 4.55492 44.8957 4.84883 45.033 5.19969C45.1704 5.55054 45.1846 5.93759 45.0735 6.29761L39.0754 25.7874H50.1425C50.4677 25.7872 50.7859 25.8824 51.0577 26.061C51.3295 26.2396 51.543 26.4939 51.6719 26.7925C51.8009 27.0911 51.8395 27.4209 51.7832 27.7412C51.7268 28.0615 51.5779 28.3583 51.3548 28.5949L24.7112 56.9037C24.4534 57.1779 24.1103 57.3566 23.7379 57.4108C23.3655 57.465 22.9858 57.3915 22.6605 57.2022C22.3353 57.0129 22.0837 56.719 21.9469 56.3685C21.81 56.0179 21.796 55.6314 21.9069 55.2718L27.9051 35.7787H16.838C16.5128 35.7788 16.1946 35.6837 15.9228 35.5051C15.651 35.3265 15.4375 35.0722 15.3085 34.7736C15.1796 34.475 15.1409 34.1452 15.1973 33.8249C15.2537 33.5046 15.4026 33.2078 15.6257 32.9711L42.2693 4.66236C42.5268 4.3886 42.8693 4.20998 43.2412 4.15556C43.613 4.10114 43.9924 4.17412 44.3175 4.36262V4.36595Z" fill="url(#paint0_linear_0_66)"/>
+<rect id="Rectangle 427" x="4.13798" y="5.19697" width="3.44831" height="15.8622" rx="1.72415" transform="rotate(-45 4.13798 5.19697)" fill="var(--fill-0, #7EBCC6)"/>
+<rect id="Rectangle 430" x="51.7249" y="52.7836" width="3.44831" height="15.8622" rx="1.72415" transform="rotate(-45 51.7249 52.7836)" fill="var(--fill-0, #41748D)"/>
+<rect id="Rectangle 428" x="62.9406" y="2.75853" width="3.44831" height="15.8622" rx="1.72415" transform="rotate(45 62.9406 2.75853)" fill="var(--fill-0, #7EBCC6)"/>
+<rect id="Rectangle 429" x="15.3542" y="50.3453" width="3.44831" height="15.8622" rx="1.72415" transform="rotate(45 15.3542 50.3453)" fill="var(--fill-0, #41748D)"/>
+<circle id="Ellipse 118" cx="2.06899" cy="39.3108" r="2.06899" fill="var(--fill-0, #EB5C5F)"/>
+<circle id="Ellipse 119" cx="7.58629" cy="44.8281" r="2.06899" fill="var(--fill-0, #EB5C5F)"/>
+<circle id="Ellipse 120" cx="22.0692" cy="2.06899" r="2.06899" fill="var(--fill-0, #EB5C5F)"/>
+<circle id="Ellipse 121" cx="66.8974" cy="32.4143" r="2.06899" fill="var(--fill-0, #EB5C5F)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_66" x1="33.4902" y1="4.13801" x2="33.4902" y2="57.4282" gradientUnits="userSpaceOnUse">
+<stop stop-color="#7EBCC6"/>
+<stop offset="1" stop-color="#41748D"/>
+</linearGradient>
+</defs>
+</svg>

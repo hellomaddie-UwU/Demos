@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/svg" href="">
+        <!--SEO START-->
+        <title>Urban Rehab | Specialist Rehabilitation Group</title>
+        <meta name="description" content="Urban Rehab provides physiotherapy, hand therapy, podiatry, and multi-disciplinary rehabilitative care across Singapore.">
+        <meta name="keywords" content="">
+
+        <!-- Universal Open Graph -->
+        <meta property="og:title" content="Urban Rehab | Specialist Rehabilitation Group">
+        <meta property="og:description" content="Providing the highest level of rehabilitative care.">
+        <meta property="og:image" content=""> <!-- Replace with actual image URL: 1200×630px -->
+        <meta property="og:image:alt" content="">
+        <meta property="og:url" content="#"> <!-- Needs to be the official URL -->
+        <meta property="og:type" content="website">
+
+        <!-- Twitter/X Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Urban Rehab | Specialist Rehabilitation Group">
+        <meta name="twitter:description" content="Providing the highest level of rehabilitative care.">
+        <meta name="twitter:image" content=""> <!-- Replace with actual image URL: 1200×630px -->
+        <!--SEO END-->
+
+        <!--Stylesheet START-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="main.css" rel="stylesheet">
+        <link href="page.css" rel="stylesheet">
+        <link href="urban-rehab-components.css" rel="stylesheet">
+        <!--Stylesheet END-->
+
+        <!--Fonts START-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Semi+Condensed:wght@400;500;600&display=swap" rel="stylesheet">
+        <!--Fonts END-->
+    </head>
+
+    <body>
+
+        <!-- Icon sprite (reused across the page via <use>) -->
+        <svg style="display:none" aria-hidden="true">
+            <symbol id="icon-facebook" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.56 9.87v-6.98H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.98A10 10 0 0 0 22 12Z" fill="currentColor" stroke="none"/></symbol>
+            <symbol id="icon-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></symbol>
+            <symbol id="icon-phone" viewBox="0 0 24 24"><path d="M6.6 10.8a15.9 15.9 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 9 9 0 0 0 2.8.45 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 2 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 9 9 0 0 0 .45 2.8 1 1 0 0 1-.25 1Z"/></symbol>
+            <symbol id="icon-email" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3 6.5 9 6.5 9-6.5"/></symbol>
+            <symbol id="icon-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.3"/></symbol>
+            <symbol id="icon-plus" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M12 7.5v9M7.5 12h9"/></symbol>
+            <symbol id="icon-chevron-right" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="m10 8 4 4-4 4"/></symbol>
+            <symbol id="icon-chevron-left" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="m14 8-4 4 4 4"/></symbol>
+            <symbol id="icon-quote" viewBox="0 0 50 40"><path d="M0 24V12C0 5.4 5.4 0 12 0v6c-3.3 0-6 2.7-6 6v2h6v10H0Zm26 0V12c0-6.6 5.4-12 12-12v6c-3.3 0-6 2.7-6 6v2h6v10H26Z" fill="currentColor" stroke="none"/></symbol>
+            <symbol id="icon-back" viewBox="0 0 24 24"><path d="m15 6-6 6 6 6"/></symbol>
+            <symbol id="icon-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+        </svg>
+
+        <header class="site-header">
+            <!-- Utility bar: branch phone numbers + socials (desktop only) -->
+            <div class="topbar d-none d-lg-block">
+                <div class="topbar-inner">
+                    <ul class="topbar-branches list-unstyled mb-0">
+                        <li class="branch-item"><span>RB Capital:</span> <a href="tel:88161244">881-61244</a></li>
+                        <li class="branch-item"><span>Metropolis:</span> <a href="tel:94749755">947-49755</a></li>
+                        <li class="branch-item"><span>MBFC:</span> <a href="tel:88383436">883-83436</a></li>
+                        <li class="branch-item"><span>Novena:</span> <a href="tel:88383403">883-83403</a></li>
+                        <li class="branch-item"><span>Paragon Medical Center:</span> <a href="tel:86003622">860-03622</a></li>
+                        <li class="branch-item"><span>Ngee Ann City:</span> <a href="tel:88161412">881-61412</a></li>
+                    </ul>
+                    <div class="topbar-social">
+                        <a href="#" aria-label="Facebook"><svg class="icon icon--sm"><use href="#icon-facebook"></use></svg></a>
+                        <a href="#" aria-label="Instagram"><svg class="icon icon--sm"><use href="#icon-instagram"></use></svg></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desktop nav -->
+            <nav class="main-nav d-none d-lg-block">
+                <div class="main-nav-inner">
+                    <a href="#home" class="brand-logo">
+                        <span class="brand-mark">UR</span>
+                        <span class="brand-wordmark">
+                            <span class="brand-name">URBANREHAB</span>
+                            <span class="brand-tagline">Specialist Rehabilitation Group</span>
+                        </span>
+                    </a>
+
+                    <ul class="main-nav-links mb-0">
+                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+
+                        <li class="nav-item has-mega">
+                            <a class="nav-link" href="#services">Our Services <span class="nav-caret">+</span></a>
+                            <div class="mega-menu">
+                                <div class="mega-menu-panel">
+                                    <div class="mega-menu-inner">
+                                        <div class="mega-menu-col">
+                                            <div class="mega-menu-thumb placeholder-box">Physiotherapy</div>
+                                            <p class="mega-menu-title">Physiotherapy</p>
+                                            <ul class="mega-menu-sublist list-unstyled">
+                                                <li class="mega-menu-subitem"><svg class="icon icon--md"><use href="#icon-chevron-right"></use></svg><p class="mb-0">General Physiotherapy</p></li>
+                                                <li class="mega-menu-subitem"><svg class="icon icon--md"><use href="#icon-chevron-right"></use></svg><p class="mb-0">Sports Physiotherapy</p></li>
+                                            </ul>
+                                            <a href="#" class="mega-menu-seeall">See All</a>
+                                        </div>
+                                        <div class="mega-menu-col">
+                                            <div class="mega-menu-thumb placeholder-box">Hand Therapy</div>
+                                            <p class="mega-menu-title">Hand Therapy</p>
+                                            <ul class="mega-menu-sublist list-unstyled">
+                                                <li class="mega-menu-subitem"><svg class="icon icon--md"><use href="#icon-chevron-right"></use></svg><p class="mb-0">Custom Splinting &amp; Bracing</p></li>
+                                            </ul>
+                                        </div>
+                                        <div class="mega-menu-col">
+                                            <div class="mega-menu-thumb placeholder-box">Podiatry</div>
+                                            <p class="mega-menu-title">Podiatry</p>
+                                            <ul class="mega-menu-sublist list-unstyled">
+                                                <li class="mega-menu-subitem"><svg class="icon icon--md"><use href="#icon-chevron-right"></use></svg><p class="mb-0">Customized Orthotics</p></li>
+                                                <li class="mega-menu-subitem"><svg class="icon icon--md"><use href="#icon-chevron-right"></use></svg><p class="mb-0">Diabetic Foot Care</p></li>
+                                            </ul>
+                                        </div>
+                                        <div class="mega-menu-col">
+                                            <div class="mega-menu-thumb placeholder-box">Operative Rehabilitation</div>
+                                            <p class="mega-menu-title">Operative Rehabilitation</p>
+                                            <ul class="mega-menu-sublist list-unstyled">
+                                                <li class="mega-menu-subitem"><svg class="icon icon--md"><use href="#icon-chevron-right"></use></svg><p class="mb-0">Pre &amp; Post Operative Rehabilitation</p></li>
+                                            </ul>
+                                        </div>
+                                        <div class="mega-menu-col">
+                                            <div class="mega-menu-thumb placeholder-box">Treatment Modalities</div>
+                                            <p class="mega-menu-title">Treatment Modalities</p>
+                                            <ul class="mega-menu-sublist list-unstyled">
+                                                <li class="mega-menu-subitem"><svg class="icon icon--md"><use href="#icon-chevron-right"></use></svg><p class="mb-0">Shockwave Therapy</p></li>
+                                                <li class="mega-menu-subitem"><svg class="icon icon--md"><use href="#icon-chevron-right"></use></svg><p class="mb-0">Ultrasound Therapy</p></li>
+                                            </ul>
+                                            <a href="#" class="mega-menu-seeall">See All</a>
+                                        </div>
+                                        <div class="mega-menu-col">
+                                            <div class="mega-menu-thumb placeholder-box">Training</div>
+                                            <p class="mega-menu-title">Training</p>
+                                            <ul class="mega-menu-sublist list-unstyled">
+                                                <li class="mega-menu-subitem"><svg class="icon icon--md"><use href="#icon-chevron-right"></use></svg><p class="mb-0">Strength &amp; Conditioning Training</p></li>
+                                            </ul>
+                                        </div>
+                                        <div class="mega-menu-col">
+                                            <div class="mega-menu-thumb placeholder-box">Massage Therapy</div>
+                                            <p class="mega-menu-title">Massage Therapy</p>
+                                            <ul class="mega-menu-sublist list-unstyled">
+                                                <li class="mega-menu-subitem"><svg class="icon icon--md"><use href="#icon-chevron-right"></use></svg><p class="mb-0">Deep Tissue Massage</p></li>
+                                                <li class="mega-menu-subitem"><svg class="icon icon--md"><use href="#icon-chevron-right"></use></svg><p class="mb-0">Sports Massage</p></li>
+                                            </ul>
+                                            <a href="#" class="mega-menu-seeall">See All</a>
+                                        </div>
+                                        <div class="mega-menu-col">
+                                            <div class="mega-menu-thumb placeholder-box">Ergonomics</div>
+                                            <p class="mega-menu-title">Ergonomics</p>
+                                            <ul class="mega-menu-sublist list-unstyled">
+                                                <li class="mega-menu-subitem"><svg class="icon icon--md"><use href="#icon-chevron-right"></use></svg><p class="mb-0">Ergonomics &amp; Fitness for Work (FFW)</p></li>
+                                            </ul>
+                                        </div>
+                                        <div class="mega-menu-col">
+                                            <div class="mega-menu-thumb placeholder-box">Pilates</div>
+                                            <p class="mega-menu-title">Pilates</p>
+                                            <ul class="mega-menu-sublist list-unstyled">
+                                                <li class="mega-menu-subitem"><svg class="icon icon--md"><use href="#icon-chevron-right"></use></svg><p class="mb-0">Clinical Pilates</p></li>
+                                            </ul>
+                                        </div>
+                                        <div class="mega-menu-col">
+                                            <div class="mega-menu-thumb placeholder-box">Traditional Chinese Medicine</div>
+                                            <p class="mega-menu-title">Traditional Chinese Medicine (TCM)</p>
+                                            <ul class="mega-menu-sublist list-unstyled">
+                                                <li class="mega-menu-subitem"><svg class="icon icon--md"><use href="#icon-chevron-right"></use></svg><p class="mb-0">Acupuncture</p></li>
+                                                <li class="mega-menu-subitem"><svg class="icon icon--md"><use href="#icon-chevron-right"></use></svg><p class="mb-0">Auricular Therapy</p></li>
+                                            </ul>
+                                            <a href="#" class="mega-menu-seeall">See All</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link" href="#team">Our Team</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Resources</a></li>
+
+                        <li class="nav-item has-dropdown">
+                            <a class="nav-link" href="#about">About Us <span class="nav-caret">+</span></a>
+                            <div class="simple-dropdown">
+                                <ul class="simple-dropdown-list list-unstyled">
+                                    <li class="simple-dropdown-item"><a href="#about">Our Story</a></li>
+                                    <li class="simple-dropdown-item"><a href="#">Careers</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link" href="#find-us">Find Us</a></li>
+                    </ul>
+
+                    <a href="#book" class="btn-ur btn-ur--primary">Book an Appointment</a>
+                </div>
+            </nav>
+
+            <!-- Mobile navbar -->
+            <nav class="mobile-navbar d-lg-none">
+                <div class="mobile-navbar-inner">
+                    <a href="#home" class="brand-logo">
+                        <span class="brand-mark">UR</span>
+                        <span class="brand-wordmark">
+                            <span class="brand-name">URBANREHAB</span>
+                            <span class="brand-tagline">Specialist Rehabilitation Group</span>
+                        </span>
+                    </a>
+                    <button type="button" class="hamburger-btn" id="mobileMenuToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- Mobile off-canvas menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <div class="mobile-menu-header">
+                    <a href="#home" class="brand-logo">
+                        <span class="brand-mark">UR</span>
+                        <span class="brand-wordmark">
+                            <span class="brand-name">URBANREHAB</span>
+                            <span class="brand-tagline">Specialist Rehabilitation Group</span>
+                        </span>
+                    </a>
+                    <button type="button" class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">
+                        <svg class="icon icon--lg"><use href="#icon-close"></use></svg>
+                    </button>
+                </div>
+
+                <div class="mobile-menu-track" id="mobileMenuTrack">
+                    <!-- Panel 0: main -->
+                    <div class="mobile-menu-panel">
+                        <ul class="mobile-menu-list list-unstyled">
+                            <li><a class="mobile-menu-link" href="#home">Home</a></li>
+                            <li><button type="button" class="mobile-menu-parent" data-goto="1">Our Services <span>+</span></button></li>
+                            <li><a class="mobile-menu-link" href="#team">Our Team</a></li>
+                            <li><a class="mobile-menu-link" href="#">Resources</a></li>
+                            <li><button type="button" class="mobile-menu-parent" data-goto="2">About Us <span>+</span></button></li>
+                            <li><a class="mobile-menu-link" href="#find-us">Find Us</a></li>
+                        </ul>
+                        <a href="#book" class="btn-ur btn-ur--primary mobile-menu-cta">Book an Appointment</a>
+                        <div class="mobile-menu-socials">
+                            <span>Socials</span>
+                            <div class="mobile-menu-socials-icons">
+                                <a href="#" aria-label="Facebook"><svg class="icon icon--sm"><use href="#icon-facebook"></use></svg></a>
+                                <a href="#" aria-label="Instagram"><svg class="icon icon--sm"><use href="#icon-instagram"></use></svg></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 1: Our Services submenu -->
+                    <div class="mobile-menu-panel">
+                        <button type="button" class="mobile-menu-back" data-goto="0">
+                            <svg class="icon icon--md"><use href="#icon-back"></use></svg> Back
+                        </button>
+                        <ul class="mobile-menu-list list-unstyled">
+                            <li><a class="mobile-menu-link" href="#services">Physiotherapy</a></li>
+                            <li><a class="mobile-menu-link" href="#services">Hand Therapy</a></li>
+                            <li><a class="mobile-menu-link" href="#services">Podiatry</a></li>
+                            <li><a class="mobile-menu-link" href="#services">Operative Rehabilitation</a></li>
+                            <li><a class="mobile-menu-link" href="#services">Treatment Modalities</a></li>
+                            <li><a class="mobile-menu-link" href="#services">Training</a></li>
+                            <li><a class="mobile-menu-link" href="#services">Massage Therapy</a></li>
+                            <li><a class="mobile-menu-link" href="#services">Ergonomics</a></li>
+                            <li><a class="mobile-menu-link" href="#services">Pilates</a></li>
+                            <li><a class="mobile-menu-link" href="#services">Traditional Chinese Medicine(TCM)</a></li>
+                        </ul>
+                        <a href="#book" class="btn-ur btn-ur--primary mobile-menu-cta">Book an Appointment</a>
+                        <div class="mobile-menu-socials">
+                            <span>Socials</span>
+                            <div class="mobile-menu-socials-icons">
+                                <a href="#" aria-label="Facebook"><svg class="icon icon--sm"><use href="#icon-facebook"></use></svg></a>
+                                <a href="#" aria-label="Instagram"><svg class="icon icon--sm"><use href="#icon-instagram"></use></svg></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 2: About Us submenu -->
+                    <div class="mobile-menu-panel">
+                        <button type="button" class="mobile-menu-back" data-goto="0">
+                            <svg class="icon icon--md"><use href="#icon-back"></use></svg> Back
+                        </button>
+                        <ul class="mobile-menu-list list-unstyled">
+                            <li><a class="mobile-menu-link" href="#about">Our Story</a></li>
+                            <li><a class="mobile-menu-link" href="#">Careers</a></li>
+                        </ul>
+                        <a href="#book" class="btn-ur btn-ur--primary mobile-menu-cta">Book an Appointment</a>
+                        <div class="mobile-menu-socials">
+                            <span>Socials</span>
+                            <div class="mobile-menu-socials-icons">
+                                <a href="#" aria-label="Facebook"><svg class="icon icon--sm"><use href="#icon-facebook"></use></svg></a>
+                                <a href="#" aria-label="Instagram"><svg class="icon icon--sm"><use href="#icon-instagram"></use></svg></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Hero -->
+            <section id="home" class="hero-banner">
+                <div class="hero-bg-placeholder placeholder-box placeholder-box--light">Hero Image — Cyclist</div>
+                <div class="hero-overlay"></div>
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Providing the highest level of rehabilitative care</h1>
+                        <p class="hero-text">Here at Urban Rehab, we assist, diagnose, and treat injuries and movement problems so that you can continue living life to the fullest.</p>
+                        <a href="#" class="btn-ur btn-ur--primary">Learn More</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Info cards -->
+            <section class="info-cards-section">
+                <div class="container">
+                    <div class="info-cards-row">
+                        <div class="info-card info-card--tint-60">
+                            <div class="info-card-media placeholder-box">Physiologist Photo</div>
+                            <h3>Our Physiologists</h3>
+                            <p>At Urbanrehab, we are committed to providing a total package of care for all types of clients.</p>
+                            <a href="#team" class="btn-ur btn-ur--outline">Meet the Team</a>
+                        </div>
+                        <div class="info-card info-card--tint-40">
+                            <div class="info-card-media placeholder-box">Clinic Photo</div>
+                            <h3>Operating Hours</h3>
+                            <ul class="hours-list">
+                                <li class="hours-row"><span>Mon-Fri</span><strong>7AM - 9PM</strong></li>
+                                <li class="hours-row"><span>Sat</span><strong>7AM - 9PM</strong></li>
+                            </ul>
+                            <a href="#find-us" class="btn-ur btn-ur--outline">Contact Us</a>
+                        </div>
+                        <div class="info-card info-card--solid">
+                            <div class="info-card-media placeholder-box">Appointment Photo</div>
+                            <h3>Book an Appointment</h3>
+                            <p>Book an appointment with us today to get on the road to healthy, pain-free living.</p>
+                            <a href="#book" class="btn-ur btn-ur--dark">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About -->
+            <section id="about" class="about-section">
+                <div class="about-bg-placeholder placeholder-box">Photo — Happy Senior Couple</div>
+                <div class="container">
+                    <div class="about-card">
+                        <p class="eyebrow">About Us</p>
+                        <h2>Welcome to Urban Rehab</h2>
+                        <p>At Urbanrehab, we are committed to providing a total package of care for all types of clients. Our therapists have a wide range of expertise and special interests in conditions that span all age groups and lifestyles.</p>
+                        <a href="#" class="btn-ur btn-ur--primary">Learn More</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services -->
+            <section id="services" class="services-section">
+                <div class="container">
+                    <div class="services-intro">
+                        <p class="eyebrow">Our Services</p>
+                        <h2>Ways We Can Help You</h2>
+                        <p class="section-lead">Our goal is to remain focused on our patients from the moment treatment starts until they finish their session with us. We feel that this approach yields the best rehabilitation and mobility outcomes for our clients.</p>
+                    </div>
+
+                    <div class="services-grid" id="servicesGrid">
+                        <article class="service-card">
+                            <div class="service-card-media placeholder-box">Physiotherapy Photo</div>
+                            <h3>Physiotherapy</h3>
+                            <p>Helps restore movement and function when someone is affected by injury, illness or disability.</p>
+                            <a href="#" class="service-card-link">Learn More</a>
+                        </article>
+                        <article class="service-card">
+                            <div class="service-card-media placeholder-box">Hand Therapy Photo</div>
+                            <h3>Hand Therapy</h3>
+                            <p>Rehabilitation of conditions affecting the hands and arms by an Occupational Therapist.</p>
+                            <a href="#" class="service-card-link">Learn More</a>
+                        </article>
+                        <article class="service-card">
+                            <div class="service-card-media placeholder-box">Podiatry Photo</div>
+                            <h3>Podiatry</h3>
+                            <p>A branch of medicine devoted to the diagnosis and treatment of foot, ankle and leg disorders.</p>
+                            <a href="#" class="service-card-link">Learn More</a>
+                        </article>
+                        <article class="service-card extra-service">
+                            <div class="service-card-media placeholder-box">Operative Rehabilitation Photo</div>
+                            <h3>Pre &amp; Post Operative Rehabilitation</h3>
+                            <p>Exercise-based intervention prescribed before and after surgery...</p>
+                            <a href="#" class="service-card-link">Learn More</a>
+                        </article>
+                        <article class="service-card extra-service">
+                            <div class="service-card-media placeholder-box">Treatment Modalities Photo</div>
+                            <h3>Treatment Modalities</h3>
+                            <p>Individualised therapy combining various methods most suitable to meet recovery needs.</p>
+                            <a href="#" class="service-card-link">Learn More</a>
+                        </article>
+                        <article class="service-card extra-service">
+                            <div class="service-card-media placeholder-box">Strength &amp; Conditioning Photo</div>
+                            <h3>Strength &amp; Conditioning Training</h3>
+                            <p>Achieve weight loss, fitness, and performance goals with...</p>
+                            <a href="#" class="service-card-link">Learn More</a>
+                        </article>
+                    </div>
+
+                    <div class="services-load-more">
+                        <button type="button" class="btn-ur btn-ur--primary" id="loadMoreServices">Load More</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Team -->
+            <section id="team" class="team-section">
+                <div class="container">
+                    <div class="team-row">
+                        <div class="team-intro">
+                            <p class="eyebrow">Our Team</p>
+                            <h2>Bringing Multi-Disciplinary Rehab Expertise</h2>
+                            <p>Meet our team of physiotherapists, hand therapist, chiropractors, occupational therapist, massage therapists, podiatrists and even Chinese Physicians in Urbanrehab.</p>
+                            <a href="#" class="btn-ur btn-ur--primary">Meet the Team</a>
+                        </div>
+
+                        <div class="team-grid">
+                            <div class="team-card">
+                                <div class="team-card-media placeholder-box">Jacob Praveen</div>
+                                <div class="team-card-body">
+                                    <h3>Jacob Praveen</h3>
+                                    <p>Senior Physiotherapist</p>
+                                </div>
+                            </div>
+                            <div class="team-card">
+                                <div class="team-card-media placeholder-box">Ee Laine Lee</div>
+                                <div class="team-card-body">
+                                    <h3>Ee Laine Lee</h3>
+                                    <p>Senior Physiotherapist</p>
+                                </div>
+                            </div>
+                            <div class="team-card">
+                                <div class="team-card-media placeholder-box">Emily Lim</div>
+                                <div class="team-card-body">
+                                    <h3>Emily Lim</h3>
+                                    <p>Senior Physiotherapist</p>
+                                </div>
+                            </div>
+                            <div class="team-card">
+                                <div class="team-card-media placeholder-box">Lisa Gold</div>
+                                <div class="team-card-body">
+                                    <h3>Lisa Gold</h3>
+                                    <p>Senior Physiotherapist</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials -->
+            <section class="testimonials-section">
+                <div class="testimonials-bg-placeholder placeholder-box placeholder-box--light">Background Photo</div>
+                <div class="container testimonials-content">
+                    <p class="eyebrow">Our Testimonials</p>
+                    <h2>What Our Patients Say</h2>
+
+                    <div class="testimonial-carousel">
+                        <button type="button" class="testimonial-arrow" id="testimonialPrev" aria-label="Previous testimonial">
+                            <svg class="icon icon--lg"><use href="#icon-chevron-left"></use></svg>
+                        </button>
+
+                        <div class="testimonial-viewport">
+                            <div class="testimonial-track" id="testimonialTrack">
+                                <blockquote class="testimonial-card">
+                                    <svg class="icon testimonial-quote-icon" style="width:50px;height:40px;"><use href="#icon-quote"></use></svg>
+                                    <p class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam eu fermentum nisl lobortis hac vitae lobortis mattis dolor. Arcu tellus eu neque aliquam at a.</p>
+                                    <div class="testimonial-author">
+                                        <div class="testimonial-avatar placeholder-box placeholder-box--round placeholder-box--light">Photo</div>
+                                        <strong>FName LName</strong>
+                                    </div>
+                                </blockquote>
+                                <blockquote class="testimonial-card">
+                                    <svg class="icon testimonial-quote-icon" style="width:50px;height:40px;"><use href="#icon-quote"></use></svg>
+                                    <p class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam eu fermentum nisl lobortis hac vitae lobortis mattis dolor. Arcu tellus eu neque aliquam at a.</p>
+                                    <div class="testimonial-author">
+                                        <div class="testimonial-avatar placeholder-box placeholder-box--round placeholder-box--light">Photo</div>
+                                        <strong>FName LName</strong>
+                                    </div>
+                                </blockquote>
+                                <blockquote class="testimonial-card">
+                                    <svg class="icon testimonial-quote-icon" style="width:50px;height:40px;"><use href="#icon-quote"></use></svg>
+                                    <p class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam eu fermentum nisl lobortis hac vitae lobortis mattis dolor. Arcu tellus eu neque aliquam at a.</p>
+                                    <div class="testimonial-author">
+                                        <div class="testimonial-avatar placeholder-box placeholder-box--round placeholder-box--light">Photo</div>
+                                        <strong>FName LName</strong>
+                                    </div>
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <button type="button" class="testimonial-arrow" id="testimonialNext" aria-label="Next testimonial">
+                            <svg class="icon icon--lg"><use href="#icon-chevron-right"></use></svg>
+                        </button>
+                    </div>
+
+                    <div class="testimonial-dots" id="testimonialDots"></div>
+                </div>
+            </section>
+
+            <!-- Insurance / CTA -->
+            <section class="insurance-section">
+                <div class="insurance-bg-placeholder placeholder-box">Photo — Family Using Tablet</div>
+                <div class="container">
+                    <div class="insurance-content">
+                        <h2>Road to a Healthier Life Awaits</h2>
+                        <div class="insurance-logos-block">
+                            <p class="insurance-label">Insurances Covered:</p>
+                            <div class="insurance-logos-grid">
+                                <div class="logo-placeholder placeholder-box">Logo</div>
+                                <div class="logo-placeholder placeholder-box">Aetna</div>
+                                <div class="logo-placeholder placeholder-box">Logo</div>
+                                <div class="logo-placeholder placeholder-box">Bupa</div>
+                                <div class="logo-placeholder placeholder-box">Logo</div>
+                                <div class="logo-placeholder placeholder-box">Logo</div>
+                                <div class="logo-placeholder placeholder-box">Logo</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Find Us -->
+            <section id="find-us" class="find-us-section">
+                <div class="container">
+                    <div class="find-us-intro">
+                        <p class="eyebrow">Find Us</p>
+                        <h2>Clinic Locations</h2>
+                    </div>
+
+                    <div class="locations-grid">
+                        <div class="location-item">
+                            <button type="button" class="location-toggle">
+                                <span class="location-name"><svg class="icon icon--md"><use href="#icon-pin"></use></svg> RB Capital</span>
+                                <svg class="icon icon--lg icon--plus"><use href="#icon-plus"></use></svg>
+                            </button>
+                            <div class="location-panel">
+                                <div class="location-panel-inner">
+                                    <p>Address placeholder, Singapore</p>
+                                    <a href="#">Get Directions</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="location-item">
+                            <button type="button" class="location-toggle">
+                                <span class="location-name"><svg class="icon icon--md"><use href="#icon-pin"></use></svg> Metropolis</span>
+                                <svg class="icon icon--lg icon--plus"><use href="#icon-plus"></use></svg>
+                            </button>
+                            <div class="location-panel">
+                                <div class="location-panel-inner">
+                                    <p>Address placeholder, Singapore</p>
+                                    <a href="#">Get Directions</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="location-item">
+                            <button type="button" class="location-toggle">
+                                <span class="location-name"><svg class="icon icon--md"><use href="#icon-pin"></use></svg> MBFC (Closed Until Further Notice)</span>
+                                <svg class="icon icon--lg icon--plus"><use href="#icon-plus"></use></svg>
+                            </button>
+                            <div class="location-panel">
+                                <div class="location-panel-inner">
+                                    <p>Address placeholder, Singapore</p>
+                                    <a href="#">Get Directions</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="location-item">
+                            <button type="button" class="location-toggle">
+                                <span class="location-name"><svg class="icon icon--md"><use href="#icon-pin"></use></svg> Novena</span>
+                                <svg class="icon icon--lg icon--plus"><use href="#icon-plus"></use></svg>
+                            </button>
+                            <div class="location-panel">
+                                <div class="location-panel-inner">
+                                    <p>Address placeholder, Singapore</p>
+                                    <a href="#">Get Directions</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="location-item">
+                            <button type="button" class="location-toggle">
+                                <span class="location-name"><svg class="icon icon--md"><use href="#icon-pin"></use></svg> Paragon Medical Centre (LEVEL 15 &amp; 17)</span>
+                                <svg class="icon icon--lg icon--plus"><use href="#icon-plus"></use></svg>
+                            </button>
+                            <div class="location-panel">
+                                <div class="location-panel-inner">
+                                    <p>Address placeholder, Singapore</p>
+                                    <a href="#">Get Directions</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="location-item">
+                            <button type="button" class="location-toggle">
+                                <span class="location-name"><svg class="icon icon--md"><use href="#icon-pin"></use></svg> Ngee Ann City</span>
+                                <svg class="icon icon--lg icon--plus"><use href="#icon-plus"></use></svg>
+                            </button>
+                            <div class="location-panel">
+                                <div class="location-panel-inner">
+                                    <p>Address placeholder, Singapore</p>
+                                    <a href="#">Get Directions</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cta-banner" id="book">
+                        <h3>Continue Living Life to the Fullest</h3>
+                        <a href="#book" class="btn-ur btn-ur--primary">Book Now</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-top">
+                    <div class="footer-brand">
+                        <a href="#home" class="brand-logo brand-logo--on-dark">
+                            <span class="brand-mark">UR</span>
+                            <span class="brand-wordmark">
+                                <span class="brand-name">URBANREHAB</span>
+                                <span class="brand-tagline">Specialist Rehabilitation Group</span>
+                            </span>
+                        </a>
+                        <p class="footer-tagline">Our goal is to remain focused on our patients from the moment treatment starts until they finish their session with us.</p>
+                    </div>
+
+                    <div class="footer-links">
+                        <p class="footer-heading">Menu</p>
+                        <a href="#home">Home</a>
+                        <a href="#services">Our Services</a>
+                        <a href="#team">Our Team</a>
+                        <a href="#">Resources</a>
+                        <a href="#about">About Us</a>
+                        <a href="#">Careers</a>
+                    </div>
+
+                    <div class="footer-hours">
+                        <p class="footer-heading">Operating Hours</p>
+                        <ul class="hours-list">
+                            <li class="hours-row"><span>Mon-Fri</span><strong>7AM - 9PM</strong></li>
+                            <li class="hours-row"><span>Sat</span><strong>7AM - 9PM</strong></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-contact">
+                        <p class="footer-heading">Contact Us</p>
+                        <div class="footer-contact-item"><svg class="icon icon--md"><use href="#icon-phone"></use></svg> <a href="tel:88161244">8816 1244</a></div>
+                        <div class="footer-contact-item"><svg class="icon icon--md"><use href="#icon-phone"></use></svg> <a href="tel:88161244">8816 1244</a></div>
+                        <div class="footer-contact-item"><svg class="icon icon--md"><use href="#icon-email"></use></svg> <a href="mailto:info@urban-rehab.org">info@urban-rehab.org</a></div>
+                    </div>
+
+                    <div class="footer-partner">
+                        <div class="footer-partner-logo placeholder-box placeholder-box--light">Partner Logo</div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p class="mb-0">&copy; <span id="footerYear"></span> - Urban Rehab Specialist Rehabilitation Group. All rights reserved.</p>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </footer>
+
+        <!--Bootstrap JS START-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!--Bootstrap JS END-->
+        <script src="main.js"></script>
+    </body>
+</html>

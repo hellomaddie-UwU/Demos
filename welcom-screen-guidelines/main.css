@@ -7,7 +7,7 @@
         2.C. Spacing Tokens
     3. CSS Variables - Design Tokens
         2.A. Spacing Scale
-    4. Page Layout
+    4. Page Layout 
     5. Typography
     6. Responsive Settings
 ───────────────────────────────────────────────*/
@@ -29,8 +29,9 @@ html, body {
     overflow-x:  hidden;
     overflow-x:  clip;
     font-family: 'Raleway', sans-serif;
-    background:  #f8f8f9;
 }
+
+body {background-color: var(--page-bg);}
 
 img {
     display:  block;
@@ -53,10 +54,11 @@ ol, ul {
     /*Mine*/
     --page-bg: #f8f8f9;
 
+    /*Brand*/
+    --mspbots-blue:#0c82ca;
+
     /*Generated*/
-    --color-bg-page:          #f8f8f9;
     --color-card-bg:          rgba(255, 255, 255, 0.4);
-    --color-msp-blue:         #0385ca;
     --color-dark-blue:        #0c2651;
     --color-text-secondary:   #606266;
     --color-text-tertiary:    #909398;
@@ -72,7 +74,8 @@ ol, ul {
         /* ───────────────────────────────────────────────
     Primitive Tokens > Typography Token
     ───────────────────────────────────────────────*/
-    --font-main:     'Raleway', sans-serif;
+    --font-chapter:  'Audiowide', sans-serif;
+    --font-body:     'Raleway', sans-serif;
     --font-subtitle: 'Dosis', sans-serif;
     /*--font-mono:  for coding if ever I finally need it :)*/
 
@@ -86,15 +89,28 @@ ol, ul {
     --text-3xl:  2.3rem;     /* 38px */
     --text-4xl:  3rem;       /* 48px */
 
+    --font-weight-light:    300;
+    --font-weight-regular:  400;
+    --font-weight-medium:   500;
+    --font-weight-semibold: 600;
+    --font-weight-bold:     700;
+
     /* ───────────────────────────────────────────────
     Primitive Tokens > Spacing Tokens
     ───────────────────────────────────────────────*/
-    --space-xxs: 0.375rem; /* 6px */
-    --space-xs:  0.5rem;   /* 8px */
-    --space-sm:  0.75rem;  /* 12px */
-    --space-md:  1rem;     /* 16px */
-    --space-lg:  1.25rem;  /* 20px */
-    --space-xl:  1.75rem;  /* 28px */
+    --space-0:  0px;
+    --space-1:  4px;
+    --space-2:  8px;
+    --space-3:  12px;
+    --space-4:  16px;
+    --space-5:  20px;
+    --space-6:  24px;
+    --space-7:  32px;
+    --space-8:  40px;
+    --space-9:  48px;
+    --space-10: 64px;
+    --space-11: 80px;
+    --space-12: 96px;
 
     /* ───────────────────────────────────────────────
     Primitive Tokens > Border Radius
@@ -115,9 +131,7 @@ Page Layout
 ───────────────────────────────────────────────*/
 .container {
     width:      100%;
-    max-width:  1440px;
-    margin:     0 auto;
-    padding:    0 130px;
+    padding: 80px 4%;
 }
 
 .page-layout {

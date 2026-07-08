@@ -1,0 +1,19 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 52.0001 48.2555" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="efficacious">
+<path id="Vector" d="M33.4154 3.2919C33.6611 3.43438 33.8513 3.65599 33.9548 3.92053C34.0584 4.18507 34.0691 4.4769 33.9854 4.74835L29.4628 19.4435H37.8073C38.0525 19.4434 38.2924 19.5151 38.4974 19.6498C38.7023 19.7845 38.8633 19.9762 38.9605 20.2013C39.0577 20.4265 39.0869 20.6751 39.0444 20.9167C39.0019 21.1582 38.8896 21.382 38.7214 21.5604L18.6323 42.905C18.4379 43.1117 18.1793 43.2465 17.8985 43.2873C17.6177 43.3282 17.3314 43.2728 17.0861 43.1301C16.8409 42.9873 16.6512 42.7658 16.548 42.5015C16.4449 42.2371 16.4343 41.9457 16.5179 41.6746L21.0405 26.9769H12.696C12.4508 26.977 12.2109 26.9053 12.0059 26.7706C11.801 26.6359 11.64 26.4442 11.5428 26.2191C11.4456 25.9939 11.4164 25.7452 11.4589 25.5037C11.5014 25.2622 11.6137 25.0384 11.7819 24.86L31.871 3.51539C32.0651 3.30897 32.3234 3.1743 32.6038 3.13327C32.8842 3.09223 33.1702 3.14726 33.4154 3.28939V3.2919Z" fill="url(#paint0_linear_0_56)"/>
+<rect id="Rectangle 427" x="3.12009" y="3.91856" width="2.6" height="11.96" rx="1.3" transform="rotate(-45 3.12009 3.91856)" fill="var(--fill-0, #7EBCC6)"/>
+<rect id="Rectangle 430" x="39" y="39.7985" width="2.6" height="11.96" rx="1.3" transform="rotate(-45 39 39.7985)" fill="var(--fill-0, #41748D)"/>
+<rect id="Rectangle 428" x="47.4569" y="2.08013" width="2.6" height="11.96" rx="1.3" transform="rotate(45 47.4569 2.08013)" fill="var(--fill-0, #7EBCC6)"/>
+<rect id="Rectangle 429" x="11.5769" y="37.9601" width="2.6" height="11.96" rx="1.3" transform="rotate(45 11.5769 37.9601)" fill="var(--fill-0, #41748D)"/>
+<circle id="Ellipse 118" cx="1.56" cy="29.64" r="1.56" fill="var(--fill-0, #EB5C5F)"/>
+<circle id="Ellipse 119" cx="5.71992" cy="33.8001" r="1.56" fill="var(--fill-0, #EB5C5F)"/>
+<circle id="Ellipse 120" cx="16.64" cy="1.56" r="1.56" fill="var(--fill-0, #EB5C5F)"/>
+<circle id="Ellipse 121" cx="50.4401" cy="24.44" r="1.56" fill="var(--fill-0, #EB5C5F)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_56" x1="25.2517" y1="3.12003" x2="25.2517" y2="43.3004" gradientUnits="userSpaceOnUse">
+<stop stop-color="#7EBCC6"/>
+<stop offset="1" stop-color="#41748D"/>
+</linearGradient>
+</defs>
+</svg>

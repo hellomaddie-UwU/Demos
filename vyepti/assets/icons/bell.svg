@@ -1,0 +1,7 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="bell">
+<path id="Icon" d="M15.5 8.39998C15.5 6.96781 14.9311 5.5943 13.9184 4.5816C12.9057 3.56891 11.5322 2.99998 10.1 2.99998C8.66783 2.99998 7.29432 3.56891 6.28162 4.5816C5.26893 5.5943 4.7 6.96781 4.7 8.39998C4.7 14.7 2 16.5 2 16.5H18.2C18.2 16.5 15.5 14.7 15.5 8.39998Z" stroke="var(--stroke-0, #41748D)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle id="Ellipse 962" cx="15" cy="5.5" r="4" fill="var(--fill-0, #F16464)"/>
+<path id="Ellipse 963" d="M10 20C11.6569 20 13 18.6569 13 17H7C7 18.6569 8.34315 20 10 20Z" fill="var(--fill-0, #41748D)"/>
+</g>
+</svg>

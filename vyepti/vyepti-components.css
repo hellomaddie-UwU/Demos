@@ -1,0 +1,468 @@
+/* ==========================================================================
+   vyepti-components.css — reusable UI components
+   Vyepti Web App Demo
+   ========================================================================== */
+
+/* ---------- Buttons ---------- */
+.vy-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 40px;
+  border-radius: 26px;
+  border: 0;
+  background-color: var(--vy-blue);
+  color: var(--vy-white);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.vy-btn:hover {
+  background-color: #345d72;
+  color: var(--vy-white);
+}
+
+.vy-btn:active {
+  transform: scale(0.98);
+}
+
+.vy-btn--sm {
+  padding: 8px 24px;
+}
+
+/* ---------- User / profile ---------- */
+.vy-user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.vy-user__pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.vy-user__name {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--vy-blue);
+}
+
+/* ---------- Sidebar nav ---------- */
+.vy-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+
+.vy-nav__label {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  color: var(--vy-body-60);
+  line-height: 22.4px;
+  margin-bottom: 8px;
+}
+
+.vy-nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.vy-nav__list a {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--vy-blue);
+  line-height: 18.9px;
+}
+
+.vy-nav__list li.active a {
+  font-weight: 700;
+}
+
+.vy-nav__settings {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--vy-blue);
+  line-height: 18.9px;
+}
+
+/* ---------- Breadcrumb ---------- */
+.vy-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--vy-body);
+}
+
+.vy-breadcrumb img {
+  width: 20px;
+  height: 20px;
+}
+
+/* ---------- Page date heading ---------- */
+.vy-date {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--vy-blue);
+}
+
+/* ---------- Feature cards (Power-on / Infusion) ---------- */
+.vy-feature-card {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background-color: var(--vy-white);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: var(--shadow-card);
+  height: 100%;
+}
+
+.vy-feature-card__icon {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.vy-feature-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.vy-feature-card__title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--vy-blue);
+}
+
+.vy-feature-card__text {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 18.9px;
+  color: var(--vy-body);
+}
+
+/* ---------- Calendar overview panel ---------- */
+.vy-calendar-panel {
+  background-color: var(--vy-teal-20);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.vy-calendar-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.vy-calendar-panel__header h2 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--vy-body);
+}
+
+.vy-calendar-panel__controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+/* Custom select ("This Month" dropdown) */
+.vy-select {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 213px;
+  padding: 10px 14px;
+  background-color: var(--vy-white);
+  border: 1px solid var(--vy-gray-300);
+  border-radius: 8px;
+  box-shadow: var(--shadow-input);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--vy-gray-500);
+  cursor: pointer;
+}
+
+.vy-select img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Legend */
+.vy-legend {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.vy-legend__label {
+  font-family: var(--font-alt);
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--vy-body);
+}
+
+.vy-legend__item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-sans);
+  font-size: 10px;
+  color: #353535;
+}
+
+.vy-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+.vy-dot--pending {
+  background-color: var(--vy-red);
+}
+
+.vy-dot--accepted {
+  background-color: var(--vy-body);
+}
+
+.vy-dot--completed {
+  background-color: var(--vy-teal);
+}
+
+/* Calendar grid */
+.vy-calendar {
+  background-color: var(--vy-white);
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+.vy-calendar table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.vy-calendar thead th {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--vy-blue);
+  text-align: center;
+  padding: 12px 0;
+}
+
+.vy-calendar tbody td {
+  vertical-align: top;
+  height: 72px;
+  padding: 4px 12px;
+  border: 1px solid var(--vy-teal-40);
+  border-top: none;
+  border-left: none;
+}
+
+.vy-calendar tbody tr td:first-child {
+  border-left: 1px solid var(--vy-teal-40);
+}
+
+.vy-calendar tbody tr:first-child td {
+  border-top: 1px solid var(--vy-teal-40);
+}
+
+.vy-calendar__day {
+  font-family: var(--font-alt);
+  font-size: 12px;
+  color: var(--vy-body-60);
+}
+
+.vy-calendar__day--muted {
+  color: var(--vy-blue-40);
+}
+
+.vy-calendar__events {
+  list-style: none;
+  margin: 6px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.vy-calendar__event {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-alt);
+  font-size: 10px;
+  color: var(--vy-body);
+}
+
+.vy-calendar__event strong {
+  font-weight: 600;
+}
+
+.vy-calendar__event .vy-dot {
+  width: 7px;
+  height: 7px;
+}
+
+.vy-calendar__see-more {
+  font-family: var(--font-alt);
+  font-weight: 600;
+  font-size: 10px;
+  color: var(--vy-red);
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+}
+
+/* ---------- Notifications panel ---------- */
+.vy-notifications {
+  background-color: var(--vy-white);
+  border: 1px solid var(--vy-teal-40);
+  border-radius: 8px;
+  padding: 24px 32px;
+}
+
+.vy-notifications__title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--vy-body);
+  margin-bottom: 16px;
+}
+
+.vy-notif-group + .vy-notif-group {
+  margin-top: 20px;
+}
+
+.vy-notif-group__day {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--vy-body);
+  margin-bottom: 4px;
+}
+
+.vy-notif-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--vy-teal-40);
+}
+
+.vy-notif-group ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.vy-notif-item:last-child {
+  border-bottom: 0;
+}
+
+.vy-notif-item__dot {
+  margin-top: 8px;
+}
+
+.vy-notif-item__text {
+  font-family: var(--font-alt);
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--vy-body);
+}
+
+.vy-notif-item__text strong {
+  color: var(--vy-red);
+  font-weight: 700;
+}
+
+.vy-notif-item__time {
+  display: block;
+  font-family: var(--font-alt);
+  font-size: 12px;
+  color: var(--vy-placeholder);
+  margin-top: 2px;
+}
+
+/* ---------- Learn more / footer promo panel ---------- */
+.vy-learnmore {
+  background-color: var(--vy-white);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  text-align: left;
+}
+
+.vy-learnmore__title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--vy-blue);
+  align-self: flex-start;
+}
+
+.vy-learnmore__item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+}
+
+.vy-learnmore__icon {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.vy-learnmore__item-title {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--vy-blue);
+  line-height: 18.9px;
+}
+
+.vy-learnmore__item-text {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 18.9px;
+  color: var(--vy-body);
+}

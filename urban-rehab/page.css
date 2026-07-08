@@ -1,0 +1,826 @@
+/* ───────────────────────────────────────────────
+    TABLE OF CONTENTS
+    1. Header / Navigation Layout
+    2. Mega Menu & Dropdown Layout
+    3. Mobile Menu Layout
+    4. Hero Layout
+    5. Info Cards Layout
+    6. About Layout
+    7. Services Layout
+    8. Team Layout
+    9. Testimonials Layout
+    10. Insurance / CTA Layout
+    11. Find Us Layout
+    12. Footer Layout
+    13. Responsive Settings
+───────────────────────────────────────────────*/
+
+/* ───────────────────────────────────────────────
+1. Header / Navigation Layout
+───────────────────────────────────────────────*/
+.site-header {
+    position: relative;
+    z-index:  1000;
+}
+
+.topbar-inner {
+    display:         flex;
+    align-items:     center;
+    justify-content: space-between;
+    gap:             var(--space-5);
+    padding:         var(--space-1) var(--space-8);
+}
+
+.topbar-branches {
+    display:  flex;
+    flex-wrap: wrap;
+}
+
+.branch-item {
+    display:     flex;
+    gap:         var(--space-1);
+    align-items: baseline;
+    padding:     var(--space-1) var(--space-5) var(--space-1) 0;
+    margin-right: var(--space-5);
+}
+
+.topbar-social {
+    display:     flex;
+    align-items: center;
+    gap:         var(--space-3);
+    flex-shrink: 0;
+}
+
+.main-nav-inner {
+    display:         flex;
+    align-items:     center;
+    justify-content: space-between;
+    gap:             var(--space-6);
+    padding:         var(--space-5) var(--space-8);
+}
+
+.brand-logo {
+    display:     flex;
+    align-items: center;
+    gap:         var(--space-3);
+    flex-shrink: 0;
+}
+
+.main-nav-links {
+    display:     flex;
+    align-items: center;
+    gap:         var(--space-7);
+    margin-bottom: 0;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    display:     flex;
+    align-items: center;
+    gap:         var(--space-1);
+    white-space: nowrap;
+}
+
+/* ───────────────────────────────────────────────
+2. Mega Menu & Dropdown Layout
+───────────────────────────────────────────────*/
+.mega-menu {
+    position: absolute;
+    top:      calc(100% + 20px);
+    left:     50%;
+    transform: translateX(-50%);
+    width:    min(1180px, 92vw);
+    z-index:  1100;
+    display:  none;
+}
+
+.nav-item.has-mega:hover .mega-menu,
+.nav-item.has-mega.is-open .mega-menu {
+    display: block;
+}
+
+.mega-menu-inner {
+    display:               grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap:                   var(--space-8) var(--space-6);
+    padding:               var(--space-8);
+}
+
+.mega-menu-col {
+    display:        flex;
+    flex-direction: column;
+    gap:            var(--space-2);
+}
+
+.mega-menu-thumb {
+    width:  100%;
+    height: 110px;
+}
+
+.mega-menu-sublist {
+    display:        flex;
+    flex-direction: column;
+    gap:            var(--space-2);
+    margin-bottom: 0;
+}
+
+.mega-menu-subitem {
+    display:     flex;
+    align-items: flex-start;
+    gap:         var(--space-2);
+}
+
+.simple-dropdown {
+    position: absolute;
+    top:      calc(100% + 20px);
+    left:     0;
+    min-width: 200px;
+    z-index:  1100;
+    display:  none;
+}
+
+.nav-item.has-dropdown:hover .simple-dropdown,
+.nav-item.has-dropdown.is-open .simple-dropdown {
+    display: block;
+}
+
+.simple-dropdown-list {
+    display:        flex;
+    flex-direction: column;
+    padding:        var(--space-3);
+    margin-bottom:  0;
+}
+
+/* ───────────────────────────────────────────────
+3. Mobile Menu Layout
+───────────────────────────────────────────────*/
+.mobile-navbar-inner {
+    display:         flex;
+    align-items:     center;
+    justify-content: space-between;
+    padding:         var(--space-4) var(--space-5);
+}
+
+.hamburger-btn {
+    display:        flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:            5px;
+    width:          40px;
+    height:         40px;
+    border:         none;
+    background:     none;
+    padding:        0;
+}
+
+.hamburger-btn span {
+    display: block;
+    width:   30px;
+    height:  3px;
+}
+
+.mobile-menu {
+    position:   fixed;
+    inset:      0;
+    z-index:    1200;
+    overflow:   hidden;
+    visibility: hidden;
+    transform:  translateX(100%);
+}
+
+.mobile-menu.is-open {
+    visibility: visible;
+    transform:  translateX(0);
+}
+
+.mobile-menu-header {
+    display:         flex;
+    align-items:     center;
+    justify-content: space-between;
+    padding:         var(--space-4) var(--space-5);
+}
+
+.mobile-menu-close {
+    width:   40px;
+    height:  40px;
+    border:  none;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-menu-track {
+    display:    flex;
+    height:     calc(100% - 72px);
+    transition: transform 0.35s ease;
+}
+
+.mobile-menu-panel {
+    flex:      0 0 100%;
+    width:     100%;
+    height:    100%;
+    overflow-y: auto;
+    display:   flex;
+    flex-direction: column;
+    padding:   var(--space-6) var(--space-6) var(--space-8);
+}
+
+.mobile-menu-list {
+    display:        flex;
+    flex-direction: column;
+    margin-bottom:  auto;
+}
+
+.mobile-menu-list li {
+    display: block;
+}
+
+.mobile-menu-link,
+.mobile-menu-parent {
+    display:         flex;
+    align-items:     center;
+    justify-content: space-between;
+    width:           100%;
+    padding:         var(--space-4) 0;
+    border:          none;
+    background:      none;
+    text-align:      left;
+}
+
+.mobile-menu-back {
+    display:     flex;
+    align-items: center;
+    gap:         var(--space-2);
+    border:      none;
+    background:  none;
+    padding:     var(--space-2) 0 var(--space-5);
+    align-self:  flex-start;
+}
+
+.mobile-menu-cta {
+    display:        block;
+    text-align:     center;
+    width:          100%;
+    margin-top:     var(--space-6);
+}
+
+.mobile-menu-socials {
+    margin-top: var(--space-5);
+}
+
+.mobile-menu-socials-icons {
+    display: flex;
+    gap:     var(--space-3);
+    margin-top: var(--space-2);
+}
+
+/* ───────────────────────────────────────────────
+4. Hero Layout
+───────────────────────────────────────────────*/
+.hero-banner {
+    position: relative;
+    display:  flex;
+    align-items: center;
+    min-height: 617px;
+    overflow: hidden;
+}
+
+.hero-bg-placeholder {
+    position: absolute;
+    inset:    0;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset:    0;
+}
+
+.hero-content {
+    position:  relative;
+    z-index:   2;
+    max-width: 500px;
+    display:   flex;
+    flex-direction: column;
+    gap:       var(--space-4);
+    padding-top: var(--space-11);
+    padding-bottom: var(--space-11);
+}
+
+/* ───────────────────────────────────────────────
+5. Info Cards Layout
+───────────────────────────────────────────────*/
+.info-cards-section {
+    position: relative;
+    z-index:  3;
+    margin-top: -94px;
+}
+
+.info-cards-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info-card {
+    flex:    1 1 33.3333%;
+    display: flex;
+    flex-direction: column;
+    gap:     var(--space-5);
+    padding: var(--space-8) var(--space-8);
+}
+
+.info-card-media {
+    width:  100%;
+    height: 120px;
+}
+
+.hours-list {
+    display:        flex;
+    flex-direction: column;
+    gap:            var(--space-4);
+    margin-bottom: 0;
+}
+
+.hours-row {
+    display:         flex;
+    align-items:     center;
+    justify-content: space-between;
+    padding-bottom:  var(--space-4);
+}
+
+/* ───────────────────────────────────────────────
+6. About Layout
+───────────────────────────────────────────────*/
+.about-section {
+    position: relative;
+    padding:  var(--space-11) 0;
+    overflow: hidden;
+}
+
+.about-bg-placeholder {
+    position: absolute;
+    inset:    var(--space-8);
+}
+
+.about-card {
+    position:  relative;
+    z-index:   2;
+    max-width: 428px;
+    margin-left: auto;
+    display:   flex;
+    flex-direction: column;
+    gap:       var(--space-5);
+    padding:   var(--space-8);
+}
+
+/* ───────────────────────────────────────────────
+7. Services Layout
+───────────────────────────────────────────────*/
+.services-section {
+    padding: var(--space-11) 0;
+}
+
+.services-intro {
+    display:        flex;
+    flex-direction: column;
+    align-items:    center;
+    text-align:     center;
+    gap:            var(--space-5);
+    margin-bottom:  var(--space-8);
+}
+
+.section-lead {
+    max-width: 854px;
+}
+
+.services-grid {
+    display:               grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:                   var(--space-8) var(--space-6);
+    margin-bottom:         var(--space-8);
+}
+
+.service-card {
+    display:        flex;
+    flex-direction: column;
+    gap:            var(--space-3);
+    padding:        var(--space-6);
+}
+
+.service-card-media {
+    width:  100%;
+    height: 150px;
+}
+
+.services-load-more {
+    display: flex;
+    justify-content: center;
+}
+
+/* Extra service cards are always visible at md+ (all 6 shown per desktop design);
+   "Load More" only does work below the md breakpoint, see responsive settings. */
+@media screen and (min-width: 769px) {
+    .services-load-more {
+        display: none;
+    }
+}
+
+/* ───────────────────────────────────────────────
+8. Team Layout
+───────────────────────────────────────────────*/
+.team-section {
+    padding: var(--space-11) 0;
+}
+
+.team-row {
+    display:               grid;
+    grid-template-columns: 5fr 7fr;
+    gap:                   var(--space-8);
+    align-items:           start;
+}
+
+.team-intro {
+    display:        flex;
+    flex-direction: column;
+    gap:            var(--space-4);
+}
+
+.team-grid {
+    display:               grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:                   var(--space-6);
+}
+
+.team-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.team-card-media {
+    width:  100%;
+    height: 180px;
+}
+
+.team-card-body {
+    padding: var(--space-4);
+}
+
+/* ───────────────────────────────────────────────
+9. Testimonials Layout
+───────────────────────────────────────────────*/
+.testimonials-section {
+    position: relative;
+    padding:  var(--space-11) 0;
+    overflow: hidden;
+}
+
+.testimonials-bg-placeholder {
+    position: absolute;
+    inset:    0;
+}
+
+.testimonials-content {
+    position:       relative;
+    z-index:        2;
+    display:        flex;
+    flex-direction: column;
+    align-items:    center;
+    text-align:     center;
+    gap:            var(--space-8);
+}
+
+.testimonial-carousel {
+    display:     flex;
+    align-items: center;
+    gap:         var(--space-5);
+    width:       100%;
+    max-width:   1152px;
+}
+
+.testimonial-arrow {
+    flex-shrink: 0;
+    width:       50px;
+    height:      50px;
+    display:     flex;
+    align-items: center;
+    justify-content: center;
+    border:      none;
+}
+
+.testimonial-viewport {
+    flex:     1;
+    overflow: hidden;
+}
+
+.testimonial-track {
+    display:    flex;
+    transition: transform 0.4s ease;
+}
+
+.testimonial-card {
+    flex:           0 0 100%;
+    display:        flex;
+    flex-direction: column;
+    align-items:    center;
+    gap:            var(--space-5);
+    padding:        0 var(--space-5);
+}
+
+.testimonial-author {
+    display:     flex;
+    align-items: center;
+    gap:         var(--space-4);
+}
+
+.testimonial-avatar {
+    width:  45px;
+    height: 45px;
+    flex-shrink: 0;
+}
+
+.testimonial-dots {
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+    gap:             var(--space-3);
+}
+
+/* ───────────────────────────────────────────────
+10. Insurance / CTA Layout
+───────────────────────────────────────────────*/
+.insurance-section {
+    position: relative;
+    padding:  var(--space-11) 0;
+    overflow: hidden;
+}
+
+.insurance-bg-placeholder {
+    position: absolute;
+    inset:    0;
+    left:     55%;
+}
+
+.insurance-content {
+    position:       relative;
+    z-index:        2;
+    max-width:      475px;
+    display:        flex;
+    flex-direction: column;
+    gap:            var(--space-8);
+}
+
+.insurance-logos-block {
+    display:        flex;
+    flex-direction: column;
+    gap:            var(--space-5);
+}
+
+.insurance-logos-grid {
+    display:               grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:                   var(--space-4);
+}
+
+.logo-placeholder {
+    height: 50px;
+}
+
+/* ───────────────────────────────────────────────
+11. Find Us Layout
+───────────────────────────────────────────────*/
+.find-us-section {
+    padding: var(--space-11) 0 0;
+}
+
+.find-us-intro {
+    display:        flex;
+    flex-direction: column;
+    align-items:    center;
+    text-align:     center;
+    gap:            var(--space-5);
+    margin-bottom:  var(--space-8);
+}
+
+.locations-grid {
+    display:               grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:                   0 var(--space-8);
+    text-align:            left;
+}
+
+.location-toggle {
+    display:         flex;
+    align-items:     center;
+    justify-content: space-between;
+    gap:             var(--space-4);
+    width:           100%;
+    padding:         var(--space-4) 0;
+    border:          none;
+    background:      none;
+}
+
+.location-name {
+    display:     flex;
+    align-items: center;
+    gap:         var(--space-3);
+}
+
+.location-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease;
+}
+
+.location-item.is-open .location-panel {
+    grid-template-rows: 1fr;
+}
+
+.location-panel-inner {
+    overflow:   hidden;
+    min-height: 0;
+    padding:    0 0 var(--space-4);
+}
+
+.cta-banner {
+    padding:        var(--space-9) 0;
+    display:        flex;
+    flex-direction: column;
+    align-items:    center;
+    text-align:     center;
+    gap:            var(--space-5);
+    margin-top:     var(--space-8);
+}
+
+/* ───────────────────────────────────────────────
+12. Footer Layout
+───────────────────────────────────────────────*/
+.site-footer {
+    padding: var(--space-9) 0 var(--space-5);
+}
+
+.footer-top {
+    display:               grid;
+    grid-template-columns: 3fr 2fr 2fr 2fr 3fr;
+    gap:                   var(--space-8);
+    padding-bottom:        var(--space-8);
+}
+
+.footer-brand {
+    display:        flex;
+    flex-direction: column;
+    gap:            var(--space-4);
+}
+
+.footer-heading {
+    margin-bottom: var(--space-4);
+}
+
+.footer-links {
+    display:        flex;
+    flex-direction: column;
+    gap:            var(--space-3);
+}
+
+.footer-contact {
+    display:        flex;
+    flex-direction: column;
+    gap:            var(--space-4);
+}
+
+.footer-contact-item {
+    display:     flex;
+    align-items: center;
+    gap:         var(--space-3);
+}
+
+.footer-partner-logo {
+    width:  108px;
+    height: 75px;
+    margin-left: auto;
+}
+
+.footer-bottom {
+    display:         flex;
+    align-items:     center;
+    justify-content: space-between;
+    flex-wrap:       wrap;
+    gap:             var(--space-3);
+    padding-top:     var(--space-4);
+}
+
+/* ───────────────────────────────────────────────
+13. Responsive Settings
+───────────────────────────────────────────────*/
+@media screen and (min-width: 1920px) {}
+
+/*Widescreen*/ /*xxl*/
+@media screen and (min-width: 1440px) {}
+
+/*Tablet LG START*/ /*lg*/
+@media screen and (max-width: 992px) {
+    .mega-menu-inner {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .info-cards-section {
+        margin-top: 0;
+    }
+
+    .info-card {
+        flex: 1 1 100%;
+    }
+
+    .about-card {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .team-row {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-top {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-partner-logo {
+        margin-left: 0;
+    }
+}
+
+/*Tablet*/ /*md*/
+@media screen and (max-width: 768px) {
+    .hero-banner {
+        min-height: 720px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        padding-top: var(--space-9);
+        padding-bottom: var(--space-9);
+    }
+
+    .mega-menu-inner {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .extra-service {
+        display: none;
+    }
+
+    .extra-service.is-visible {
+        display: flex;
+    }
+
+    .insurance-bg-placeholder {
+        position: static;
+        inset:    auto;
+        height:   240px;
+        margin-bottom: var(--space-6);
+    }
+
+    .insurance-content {
+        max-width: 100%;
+    }
+
+    .insurance-logos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .locations-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*Mobile*/ /*sm*/
+@media screen and (max-width: 567px) {
+    .topbar-inner,
+    .main-nav-inner {
+        padding-left:  var(--space-5);
+        padding-right: var(--space-5);
+    }
+
+    .mega-menu-inner {
+        grid-template-columns: 1fr;
+        padding: var(--space-6);
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-grid {
+        gap: var(--space-4);
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg">
+        <title>Power-On Treatment | Vyepti Web App Demo</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="main.css" rel="stylesheet">
+        <link href="app.css" rel="stylesheet">
+        <link href="vyepti-components.css" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="vy-shell" id="vyShell">
+            <img class="vy-bg-shapes" src="assets/icons/bg-shapes.svg" alt="">
+
+            <aside class="vy-sidebar">
+                <div class="vy-user">
+                    <img class="vy-user__pic" src="assets/icons/profile-pic.svg" alt="">
+                    <span class="vy-user__name">Hello, Martha</span>
+                </div>
+
+                <nav class="vy-nav">
+                    <div class="vy-nav__group">
+                        <p class="vy-nav__label">Dashboard</p>
+                        <ul class="vy-nav__list">
+                            <li><a href="dashboard.html">Home</a></li>
+                            <li><a href="calendar-overview.html">Calendar Overview</a></li>
+                            <li><a href="patient-directory.html">Patient Directory</a></li>
+                            <li><a href="about-vyepti.html">About Vyepti</a></li>
+                        </ul>
+                    </div>
+                    <div class="vy-nav__group">
+                        <p class="vy-nav__label">Forms</p>
+                        <ul class="vy-nav__list">
+                            <li class="active"><a href="power-on-treatment.html" aria-current="page">Power-On Treatment</a></li>
+                            <li><a href="infusion-appointment.html">Infusion Appointment</a></li>
+                        </ul>
+                    </div>
+                    <a class="vy-nav__settings" href="settings.html">Settings</a>
+                </nav>
+            </aside>
+
+            <div class="vy-main">
+                <header class="vy-topbar">
+                    <button class="vy-topbar__menu" id="sidebarToggle" type="button" aria-label="Toggle sidebar" aria-controls="vyShell" aria-expanded="true">
+                        <img src="assets/icons/menu.svg" alt="" width="20" height="20">
+                    </button>
+                    <img class="vy-topbar__logo" src="assets/icons/logo.svg" alt="Vyepti">
+                    <div class="vy-topbar__actions">
+                        <button class="vy-topbar__bell" type="button" aria-label="Notifications">
+                            <img src="assets/icons/bell.svg" alt="" width="20" height="20">
+                        </button>
+                        <a class="d-flex align-items-center gap-1" href="login.html" style="color: var(--vy-blue); font-family: var(--font-heading); font-weight: 600; font-size: 14px;">
+                            <img src="assets/icons/log-out.svg" alt="" width="20" height="20">
+                            Log out
+                        </a>
+                    </div>
+                </header>
+
+                <div class="vy-content">
+                    <main class="vy-page">
+                        <div class="vy-breadcrumb">
+                            <img src="assets/icons/home.svg" alt="">
+                            <a href="dashboard.html" class="text-decoration-none" style="color: var(--vy-body);">Home</a>
+                            <span>/</span>
+                            <span>Power-On Treatment</span>
+                        </div>
+
+                        <div class="vy-placeholder-page">
+                            <h1 class="vy-date">Power-On Treatment Plan</h1>
+                            <p class="vy-feature-card__text" style="max-width: 480px;">This page isn't part of the original junior-year design yet — the enrollment form for the Vyepti Power-on Treatment Plan will live here.</p>
+                            <a class="vy-btn" href="dashboard.html">Back to Home</a>
+                        </div>
+
+                        <footer class="vy-footer">© 2021 Lundbeck. All rights reserved.</footer>
+                    </main>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            document.getElementById('sidebarToggle').addEventListener('click', function () {
+                var shell = document.getElementById('vyShell');
+                var collapsed = shell.classList.toggle('vy-sidebar-collapsed');
+                this.setAttribute('aria-expanded', String(!collapsed));
+            });
+        </script>
+    </body>
+</html>

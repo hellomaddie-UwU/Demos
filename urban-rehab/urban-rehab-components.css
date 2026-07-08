@@ -1,0 +1,667 @@
+/* ───────────────────────────────────────────────
+    TABLE OF CONTENTS
+    1. Buttons
+    2. Placeholder Media
+    3. Brand Logo
+    4. Icons
+    5. Header / Topbar / Nav
+    6. Mega Menu & Dropdown
+    7. Mobile Menu
+    8. Hero
+    9. Info Cards
+    10. About
+    11. Services
+    12. Team
+    13. Testimonials
+    14. Insurance / CTA
+    15. Find Us
+    16. Footer
+───────────────────────────────────────────────*/
+
+/* ───────────────────────────────────────────────
+1. Buttons
+───────────────────────────────────────────────*/
+.btn-ur {
+    display:         inline-flex;
+    align-items:     center;
+    justify-content: center;
+    padding:         7px 30px;
+    border-radius:   var(--radius-sm);
+    border:          1px solid transparent;
+    font-family:     var(--font-body);
+    font-weight:     600;
+    font-size:       var(--fs-body-01);
+    line-height:     normal;
+    white-space:     nowrap;
+    transition:      background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+}
+
+.btn-ur--primary {
+    background: var(--ur-gray-blue);
+    color:      var(--white);
+}
+
+.btn-ur--primary:hover {
+    background: var(--ur-gray-blue-20);
+    box-shadow: var(--shadow-ur);
+    color:      var(--white);
+}
+
+.btn-ur--outline {
+    background:  transparent;
+    border-color: var(--ur-green-60);
+    color:       var(--ur-green-60);
+}
+
+.btn-ur--outline:hover {
+    background: var(--ur-green-60);
+    color:      var(--white);
+}
+
+.btn-ur--dark {
+    background: var(--ur-green-60);
+    color:      var(--white);
+}
+
+.btn-ur--dark:hover {
+    background: var(--ur-green-80);
+    box-shadow: var(--shadow-ur);
+}
+
+/* ───────────────────────────────────────────────
+2. Placeholder Media
+───────────────────────────────────────────────*/
+.placeholder-box {
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+    text-align:      center;
+    background:      repeating-linear-gradient(
+                        135deg,
+                        var(--gray-6),
+                        var(--gray-6) 10px,
+                        var(--off-white) 10px,
+                        var(--off-white) 20px
+                     );
+    border:          1px dashed var(--gray-5);
+    color:           var(--body-color);
+    font-size:       var(--fs-caption);
+    font-weight:     600;
+    letter-spacing:  0.02em;
+    padding:         var(--space-2);
+    border-radius:   var(--radius-md);
+}
+
+.placeholder-box--round {
+    border-radius: var(--radius-full);
+}
+
+.placeholder-box--light {
+    background: repeating-linear-gradient(
+                    135deg,
+                    rgba(255, 255, 255, 0.14),
+                    rgba(255, 255, 255, 0.14) 10px,
+                    rgba(255, 255, 255, 0.05) 10px,
+                    rgba(255, 255, 255, 0.05) 20px
+                );
+    border-color: rgba(255, 255, 255, 0.4);
+    color:        var(--white);
+}
+
+/* ───────────────────────────────────────────────
+3. Brand Logo
+───────────────────────────────────────────────*/
+.brand-mark {
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+    flex-shrink:     0;
+    width:           40px;
+    height:          40px;
+    border-radius:   38% 38% 38% 8%;
+    background:      var(--ur-green);
+    color:           var(--white);
+    font-family:     var(--font-heading);
+    font-weight:     600;
+    font-size:       17px;
+}
+
+.brand-wordmark {
+    display:        flex;
+    flex-direction: column;
+    line-height:    1.1;
+}
+
+.brand-name {
+    font-family:    var(--font-heading);
+    font-weight:    600;
+    font-size:      20px;
+    color:          var(--ur-green-60);
+    letter-spacing: 0.01em;
+}
+
+.brand-tagline {
+    font-family:    var(--font-body);
+    font-size:      9px;
+    font-weight:    600;
+    letter-spacing: 0.12em;
+    color:          var(--body-color);
+    text-transform: uppercase;
+}
+
+.brand-logo--on-dark .brand-name {
+    color: var(--white);
+}
+
+.brand-logo--on-dark .brand-tagline {
+    color: var(--ur-green-tint-40);
+}
+
+/* ───────────────────────────────────────────────
+4. Icons
+───────────────────────────────────────────────*/
+.icon {
+    width:       1em;
+    height:      1em;
+    fill:        none;
+    stroke:      currentColor;
+    flex-shrink: 0;
+}
+
+.icon--sm { width: 18px; height: 18px; }
+.icon--md { width: 22px; height: 22px; }
+.icon--lg { width: 25px; height: 25px; }
+
+/* ───────────────────────────────────────────────
+5. Header / Topbar / Nav
+───────────────────────────────────────────────*/
+.topbar {
+    background: var(--ur-green-60);
+    color:      var(--white);
+    font-size:  var(--fs-caption);
+    line-height: var(--lh-caption);
+}
+
+.branch-item {
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.branch-item:last-child {
+    border-right: none;
+    margin-right: 0;
+}
+
+.branch-item a {
+    font-weight:     600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.topbar-social a {
+    color: var(--white);
+    display: flex;
+}
+
+.main-nav,
+.mobile-navbar {
+    background: var(--white);
+    box-shadow: var(--shadow-ur);
+}
+
+.nav-link {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size:   var(--fs-h06);
+    color:       var(--heading-color);
+}
+
+.nav-link:hover {
+    color: var(--ur-gray-blue);
+}
+
+.nav-caret {
+    font-size: 15px;
+    color:     var(--ur-gray-blue);
+}
+
+/* ───────────────────────────────────────────────
+6. Mega Menu & Dropdown
+───────────────────────────────────────────────*/
+.mega-menu-panel,
+.simple-dropdown {
+    background:    var(--white);
+    box-shadow:    var(--shadow-ur);
+    border-radius: var(--radius-md);
+}
+
+.mega-menu-title {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size:   var(--fs-h06);
+    color:       var(--heading-color);
+}
+
+.mega-menu-subitem p {
+    font-size: var(--fs-body-02);
+    color:     var(--heading-color);
+}
+
+.mega-menu-subitem .icon {
+    color: var(--ur-gray-blue);
+}
+
+.mega-menu-seeall,
+.simple-dropdown-item a {
+    font-size:       var(--fs-body-02);
+    font-weight:     500;
+    color:           var(--ur-gray-blue);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.simple-dropdown-item a {
+    display: block;
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--fs-h06);
+    font-weight: 400;
+    color: var(--heading-color);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.simple-dropdown-item a:hover {
+    color: var(--ur-gray-blue);
+}
+
+/* ───────────────────────────────────────────────
+7. Mobile Menu
+───────────────────────────────────────────────*/
+.mobile-navbar {
+    display: flex;
+}
+
+.hamburger-btn span {
+    background:    var(--ur-green-60);
+    border-radius: var(--radius-full);
+}
+
+.mobile-menu {
+    background: var(--white);
+}
+
+.mobile-menu-close {
+    color: var(--heading-color);
+}
+
+.mobile-menu-link,
+.mobile-menu-parent {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size:   var(--fs-h06);
+    color:       var(--heading-color);
+    border-bottom: 1px solid var(--gray-5);
+}
+
+.mobile-menu-back {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size:   var(--fs-body-02);
+    color:       var(--ur-green-60);
+}
+
+.mobile-menu-socials span {
+    font-size:   var(--fs-caption);
+    font-weight: 600;
+    color:       var(--body-color);
+}
+
+.mobile-menu-socials-icons a {
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+    width:           32px;
+    height:          32px;
+    border-radius:   var(--radius-full);
+    background:      var(--ur-green-60);
+    color:           var(--white);
+}
+
+/* ───────────────────────────────────────────────
+8. Hero
+───────────────────────────────────────────────*/
+.hero-overlay {
+    background: rgba(65, 86, 77, 0.35);
+}
+
+.hero-title {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size:   var(--fs-h02);
+    line-height: var(--lh-h02);
+    color:       var(--white);
+}
+
+.hero-text {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size:   var(--fs-h06);
+    line-height: 1.5;
+    color:       var(--white);
+}
+
+/* ───────────────────────────────────────────────
+9. Info Cards
+───────────────────────────────────────────────*/
+.info-card--tint-60 { background: var(--ur-green-tint-60); }
+.info-card--tint-40 { background: var(--ur-green-tint-40); }
+.info-card--solid   { background: var(--ur-green); }
+
+.info-card h3 {
+    font-size: var(--fs-h05);
+    line-height: var(--lh-h05);
+}
+
+.info-card p {
+    font-size:   var(--fs-body-01);
+    line-height: var(--lh-body-01);
+    color:       var(--heading-color);
+}
+
+.hours-row {
+    font-size: var(--fs-body-01);
+    color:     var(--heading-color);
+}
+
+.hours-row span { font-weight: 400; }
+.hours-row strong { font-weight: 600; }
+
+.hours-row:not(:last-child) {
+    border-bottom: 1px solid var(--heading-color);
+}
+
+/* ───────────────────────────────────────────────
+10. About
+───────────────────────────────────────────────*/
+.about-card {
+    background: var(--white);
+    box-shadow: var(--shadow-ur);
+    border-radius: var(--radius-md);
+}
+
+.about-card h2 {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size:   var(--fs-h03);
+    line-height: var(--lh-h03);
+}
+
+.about-card p {
+    font-size:   var(--fs-body-01);
+    line-height: var(--lh-body-01);
+}
+
+/* ───────────────────────────────────────────────
+11. Services
+───────────────────────────────────────────────*/
+.services-intro h2 {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size:   var(--fs-h03);
+    line-height: var(--lh-h03);
+}
+
+.section-lead {
+    font-size:   var(--fs-body-01);
+    line-height: var(--lh-body-01);
+    color:       var(--body-color);
+}
+
+.service-card {
+    background: var(--white);
+    box-shadow: var(--shadow-ur);
+    border-radius: var(--radius-md);
+}
+
+.service-card h3 {
+    font-size: var(--fs-h05);
+    line-height: var(--lh-h05);
+}
+
+.service-card p {
+    font-size:   var(--fs-body-02);
+    line-height: var(--lh-body-02);
+    color:       var(--body-color);
+}
+
+.service-card-link {
+    font-size:       var(--fs-body-01);
+    font-weight:     500;
+    color:           var(--ur-gray-blue);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+/* ───────────────────────────────────────────────
+12. Team
+───────────────────────────────────────────────*/
+.team-intro h2 {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size:   var(--fs-h03);
+    line-height: var(--lh-h03);
+}
+
+.team-intro p {
+    font-size:   var(--fs-body-01);
+    line-height: var(--lh-body-01);
+}
+
+.team-card {
+    box-shadow:    var(--shadow-ur);
+    border-radius: var(--radius-md);
+    overflow:      hidden;
+}
+
+.team-card-media {
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.team-card-body {
+    background: var(--white);
+}
+
+.team-card-body h3 {
+    font-size:   var(--fs-h06);
+    font-weight: 600;
+    color:       var(--heading-color);
+}
+
+.team-card-body p {
+    font-size: var(--fs-body-02);
+    color:     var(--body-color);
+}
+
+/* ───────────────────────────────────────────────
+13. Testimonials
+───────────────────────────────────────────────*/
+.testimonials-bg-placeholder::after {
+    content:    "";
+    position:   absolute;
+    inset:      0;
+    background: rgba(37, 43, 31, 0.6);
+}
+
+.testimonials-content .eyebrow,
+.testimonials-content h2 {
+    color: var(--white);
+}
+
+.testimonials-content h2 {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size:   var(--fs-h03);
+    line-height: var(--lh-h03);
+}
+
+.testimonial-quote-icon {
+    color: var(--ur-green-tint-40);
+}
+
+.testimonial-text {
+    color:     var(--white);
+    font-size: var(--fs-body-01);
+    line-height: var(--lh-body-01);
+}
+
+.testimonial-author strong {
+    display:   block;
+    color:     var(--white);
+    font-size: var(--fs-body-02);
+    font-weight: 600;
+}
+
+.testimonial-arrow {
+    background:    var(--white);
+    border-radius: var(--radius-full);
+    color:         var(--ur-gray-blue);
+    box-shadow:    var(--shadow-ur);
+}
+
+.testimonial-arrow:hover {
+    background: var(--ur-gray-blue);
+    color:      var(--white);
+}
+
+.testimonial-dot {
+    width:         15px;
+    height:        15px;
+    border-radius: var(--radius-full);
+    border:        none;
+    background:    rgba(255, 255, 255, 0.4);
+}
+
+.testimonial-dot.is-active {
+    background: var(--white);
+}
+
+/* ───────────────────────────────────────────────
+14. Insurance / CTA
+───────────────────────────────────────────────*/
+.insurance-content h2 {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size:   var(--fs-h03);
+    line-height: var(--lh-h03);
+}
+
+.insurance-label {
+    font-size:   var(--fs-h06);
+    font-weight: 600;
+    color:       var(--heading-color);
+}
+
+/* ───────────────────────────────────────────────
+15. Find Us
+───────────────────────────────────────────────*/
+.find-us-section {
+    background: var(--ur-green-tint-80);
+}
+
+.find-us-intro h2 {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size:   var(--fs-h03);
+    line-height: var(--lh-h03);
+}
+
+.location-item {
+    border-bottom: 1px solid var(--gray-5);
+}
+
+.location-name {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size:   var(--fs-h06);
+    color:       var(--heading-color);
+}
+
+.location-name .icon {
+    color: var(--ur-gray-blue);
+}
+
+.location-toggle .icon--plus {
+    color:      var(--ur-gray-blue);
+    transition: transform 0.2s ease;
+}
+
+.location-item.is-open .icon--plus {
+    transform: rotate(45deg);
+}
+
+.location-panel-inner p {
+    font-size:     var(--fs-body-02);
+    margin-bottom: var(--space-2);
+}
+
+.location-panel-inner a {
+    font-size:       var(--fs-body-02);
+    font-weight:     500;
+    color:           var(--ur-gray-blue);
+    text-decoration: underline;
+}
+
+.cta-banner h3 {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size:   var(--fs-h03);
+    line-height: var(--lh-h03);
+}
+
+/* ───────────────────────────────────────────────
+16. Footer
+───────────────────────────────────────────────*/
+.site-footer {
+    background: var(--ur-green-80);
+    color:      var(--white);
+}
+
+.footer-tagline {
+    font-size:   var(--fs-caption);
+    line-height: var(--lh-caption);
+    color:       var(--white);
+}
+
+.footer-heading {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size:   var(--fs-h06);
+    color:       var(--white);
+}
+
+.footer-links a {
+    font-size: var(--fs-body-02);
+    color:     var(--white);
+}
+
+.footer-links a:hover {
+    color: var(--ur-green);
+}
+
+.footer-contact-item {
+    font-size: var(--fs-body-02);
+    color:     var(--white);
+}
+
+.footer-contact-item .icon {
+    color: var(--ur-green);
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--ur-green);
+    font-size:  var(--fs-caption);
+    color:      var(--white);
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
