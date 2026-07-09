@@ -32,6 +32,34 @@
 
 .img-disappear {display:block;}
 
+.light-sections-wrap, .dark-sections-wrap {position: relative;}
+
+.left-divider, .right-divider,
+.left-divider-dark, .right-divider-dark {
+    width: 1.5px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: block;
+}
+
+.left-divider, .right-divider, .break-line {background-color: rgba(128, 128, 128, 0.3);}
+
+.left-divider-dark, .right-divider-dark {background-color: rgba(255, 255, 255, 0.25);}
+
+.break-line-dark {
+    background-color: rgba(59, 59, 59, 0.25);
+    width: 100%; 
+    display: block; 
+    height: 0.5px;
+}
+
+.left-divider, .left-divider-dark {left: 30px;}
+
+.right-divider, .right-divider-dark {right: 30px;}
+
+.break-line {width: 100%; display: block; height: 1.5px;}
+
 .socmed-icon {
     height: 40px; 
     width: 40px;
@@ -209,6 +237,13 @@ Navigation
     }
 
     .nav-links .dropdown-item {padding: 9px 20px;}
+
+    .nav-links .dropdown-item:hover,
+    .nav-links .dropdown-item:focus,
+    .nav-links .dropdown-item:active {
+        background-color: transparent;
+        color:             var(--white);
+    }
 
     .nav-links a .chevron {font-size: 9px;}
 
@@ -657,6 +692,7 @@ Footer
 footer {
     background-color: var(--dark-surface);
     padding:          80px 5%;
+    position:         relative;
 }
 
 /* Row 1: Social icons + Newsletter */
@@ -824,20 +860,20 @@ Responsive Settings
 
     /* Mobile: dropdowns expand inline (accordion-style) */
     .nav-links .dropdown-menu {
-        background-color: rgba(255,255,255,0.05);
-        border:             none;
-        border-radius:      0;
-        margin-top:         0;
-        padding:            0;
-        position:           relative;
-        width:              100%;
-      }
+    background-color: rgba(255,255,255,0.05);
+    border:             none;
+    border-radius:      0;
+    margin-top:         0;
+    padding:            0;
+    position:           relative;
+    width:              100%;
+    }
 
-      .nav-links .dropdown-item {
-        padding:       9px 8px 9px 24px; /* indent under parent */
-        border-bottom: 1px solid rgba(255,255,255,0.05);
-        color:         var(--white);
-      }
+    .nav-links .dropdown-item {
+    padding:       9px 8px 9px 24px; /* indent under parent */
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    color:         var(--white);
+    }
     
     .img-disappear {display: none;}
 
@@ -862,6 +898,9 @@ Responsive Settings
 
 /*Tablet*/ /*md*/
 @media screen and (max-width: 768px) {
+    .left-divider, .right-divider,
+    .left-divider-dark, .right-divider-dark {display: none;}
+
     .kf-tab-btn {min-height: 70px;}
 
     .kf-tabs {flex-direction: column;}
