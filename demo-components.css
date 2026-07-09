@@ -1,6 +1,7 @@
 /* ───────────────────────────────────────────────
     TABLE OF CONTENTS
     1. Demo Cards
+    2. Tab Buttons
 ───────────────────────────────────────────────*/
 
 /* ───────────────────────────────────────────────
@@ -110,6 +111,46 @@ Demo Card
         color: #A12ECB;
     }
 
+    .demo-card.hidden {display: none;}
+
+/* ───────────────────────────────────────────────
+Tab Buttons
+───────────────────────────────────────────────*/
+    .tab-buttons {
+        margin-top:      var(--space-7);
+        display:         flex;
+        align-items:     center;
+        justify-content: center;
+        flex-wrap:       wrap;
+        gap:             var(--space-3);
+    }
+
+    .tab-btn {
+        border:           1px solid var(--border);
+        background-color: var(--card-surface);
+        border-radius:    var(--radius-full);
+        padding:          8px 20px;
+
+        /*Text*/
+        font-family:   var(--font-sans);
+        font-size:     var(--text-sm);
+        font-weight:   var(--font-weight-medium);
+        color:         var(--text-body);
+
+        cursor:     pointer;
+        transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    }
+
+    .tab-btn:hover {
+        border-color: var(--border-hover);
+    }
+
+    .tab-btn.active {
+        background-color: var(--accent);
+        border-color:     var(--accent);
+        color:            #ffffff;
+    }
+
 /* ───────────────────────────────────────────────
 Responsive Settings
 ───────────────────────────────────────────────*/
@@ -133,4 +174,11 @@ Responsive Settings
     .cards-container {grid-template-columns: repeat(1, 1fr);}
 
     .card-thumbnail {height: 250px;}
+
+    .tab-buttons {gap: var(--space-2);}
+
+    .tab-btn {
+        padding:   6px 14px;
+        font-size: var(--text-xs);
+    }
 }

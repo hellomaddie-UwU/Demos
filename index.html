@@ -38,7 +38,7 @@
     </head>
 
     <body>
-        <header class="pb-5 border-bottom">
+        <header class="pb-2">
             <div class="d-flex justify-content-center py-5">
                 <a href="#">
                     <img src="imgs/hellomaddie-logo.svg" alt="hellomaddie-logo">
@@ -51,17 +51,26 @@
             <div class="header-divider"></div>
         </header>
 
+        <!--Tab Buttons-->
+        <div class="tab-buttons">
+            <button type="button" class="tab-btn active" data-filter="all">All</button>
+            <button type="button" class="tab-btn" data-filter="website">Websites</button>
+            <button type="button" class="tab-btn" data-filter="webapp">Web Apps</button>
+            <button type="button" class="tab-btn" data-filter="mobileapp">Mobile Apps</button>
+        </div>
+
         <!-- ===== Card Grid START ===== -->
-        <div class="cards-container my-5">
-            <!-- ── Design Guidelines ── --> 
-             <a href="welcom-screen-guidelines/index.html" class="demo-card">
+        <div class="cards-container mt-3 mb-5">
+            <!-- ── Design Guidelines ── -->
+             <a href="welcom-screen-guidelines/index.html" class="demo-card" data-category="website">
                 <img class="card-thumbnail" src="imgs/placeholder-img-sample.png" alt="#">
                 <div class="card-body-inner">
                     <div class="card-meta">
                         <span class="pill pill-website">Industry</span>
+                        <span class="pill pill-website">Industry</span>
                     </div>
                     <h6>Welcome Screen Design Guidelines</h6>
-                    <p class="card-description">insert description here</p>
+                    <p class="card-description">A self-initiated design system extension for MSPbots, built to close a gap that should have been addressed during the original build. These guidelines give the Asset Team a single source of truth for designing consistent Welcome Screens across every app in the MSPbots suite, replacing ad hoc, one-off decisions with a repeatable standard.</p>
                 </div>
                 <div class="card-footer-inner">
                     <p class="card-client">Client: MSPbots</p>
@@ -73,14 +82,15 @@
             </a>
 
             <!-- ── MSPbots ── -->
-            <a href="mspbots/trupeer.html" class="demo-card">
+            <a href="mspbots/trupeer.html" class="demo-card" data-category="website">
                 <img class="card-thumbnail" src="imgs/placeholder-img-sample.png" alt="#">
                 <div class="card-body-inner">
                     <div class="card-meta">
                         <span class="pill pill-website">Industry</span>
+                        <span class="pill pill-website">Industry</span>
                     </div>
                     <h6>Multi-Product Launch Pages</h6>
-                    <p class="card-description">insert description here</p>
+                    <p class="card-description">MSPbots regularly upgrades or launches new apps based on churn-rate data, and each release needed a landing page to match. These pages communicate each app's benefits, features, and value at a glance, with the explicit goal of converting prospects into booked demos with a Customer Success Manager.</p>
                 </div>
                 <div class="card-footer-inner">
                     <p class="card-client">Client: MSPbots</p>
@@ -91,15 +101,16 @@
                 </div>
             </a>
 
-            <!-- ── Korn Ferry ── --> 
-             <a href="#" class="demo-card">
+            <!-- ── Korn Ferry ── -->
+             <a href="#" class="demo-card" data-category="website">
                 <img class="card-thumbnail" src="imgs/placeholder-img-sample.png" alt="#">
                 <div class="card-body-inner">
                     <div class="card-meta">
                         <span class="pill pill-website">Industry</span>
+                        <span class="pill pill-website">Industry</span>
                     </div>
                     <h6>A UX Audit and Site Revamp</h6>
-                    <p class="card-description">insert description here</p>
+                    <p class="card-description">Years ago, Korn Ferry's outdated site was successfully rebuilt to better showcase their course catalog. Since then, the client migrated to Webflow and the experience quietly regressed, leaving multiple broken 404 pages and poor navigation. This demo audits the current Webflow site and proposes an updated design that fixes the UX issues while staying true to Korn Ferry's existing branding and intent.</p>
                 </div>
                 <div class="card-footer-inner">
                     <p class="card-client">Client: Korn Ferry</p>
@@ -110,15 +121,16 @@
                 </div>
             </a>
 
-            <!-- ── Joblu ── --> 
-             <a href="#" class="demo-card">
+            <!-- ── Joblu ── -->
+             <a href="#" class="demo-card" data-category="website">
                 <img class="card-thumbnail" src="imgs/placeholder-img-sample.png" alt="#">
                 <div class="card-body-inner">
                     <div class="card-meta">
                         <span class="pill pill-website">Industry</span>
+                        <span class="pill pill-website">Industry</span>
                     </div>
                     <h6>Business Launched Website</h6>
-                    <p class="card-description">insert description here</p>
+                    <p class="card-description">Joblu was an early-stage startup that needed a marketing site to educate prospects on its key selling points, a project that succeeded at launch. A later revamp by another team weakened both the visual design and conversion performance, so this demo presents a proposed revamp grounded in deep familiarity with the brand, having also led Joblu's brand system, mobile and web app design, and marketing at the time.</p>
                 </div>
                 <div class="card-footer-inner">
                     <p class="card-client">Client: Joblu</p>
@@ -128,11 +140,52 @@
                     </div>
                 </div>
             </a>
+
+            <!-- ── Kuushy ── -->
+             <a href="#" class="demo-card" data-category="mobileapp">
+                <img class="card-thumbnail" src="imgs/placeholder-img-sample.png" alt="#">
+                <div class="card-body-inner">
+                    <div class="card-meta">
+                        <span class="pill pill-website">Industry</span>
+                        <span class="pill pill-website">Industry</span>
+                    </div>
+                    <h6>MVP Build</h6>
+                    <p class="card-description">Kuushy was a successfully funded Kickstarter project for an AI-powered sensory seat cushion designed to ease back pain for office workers. The scope covered both the brand mascot and the full MVP app design. Though the product is no longer on the market, this interactive demo preserves the app experience as originally designed.</p>
+                </div>
+                <div class="card-footer-inner">
+                    <p class="card-client">Client: Kuushy</p>
+                    <div class="demo-btn">
+                        <p>View Demo</p>
+                        <img src="imgs/arrow.svg">
+                    </div>
+                </div>
+            </a>
+
+            <!-- ── Vypeti ── -->
+             <a href="#" class="demo-card" data-category="webapp">
+                <img class="card-thumbnail" src="imgs/placeholder-img-sample.png" alt="#">
+                <div class="card-body-inner">
+                    <div class="card-meta">
+                        <span class="pill pill-website">Industry</span>
+                        <span class="pill pill-website">Industry</span>
+                    </div>
+                    <h6>Dashboard Revamp</h6>
+                    <p class="card-description">Vyepti is a booking web app that lets nurses and administrative staff schedule treatments with the appropriate doctor. The original build succeeded but drifted from the client's own brief as direction shifted mid-project, leaving gaps between what was promised and what shipped. This revamp restores every originally specified function in a cleaner, more clinical interface suited to a medical product.</p>
+                </div>
+                <div class="card-footer-inner">
+                    <p class="card-client">Client: Lundbeck</p>
+                    <div class="demo-btn">
+                        <p>View Demo</p>
+                        <img src="imgs/arrow.svg">
+                    </div>
+                </div>
+            </a>
         </div>
-        <!-- ===== Card Grid END ===== --> 
+        <!-- ===== Card Grid END ===== -->
 
         <!--Bootstrap JS START-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
         <!--Bootstrap JS END-->
+        <script src="script.js"></script>
     </body>
 </html>
