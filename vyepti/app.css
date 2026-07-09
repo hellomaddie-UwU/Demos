@@ -8,7 +8,7 @@
   min-height: 100vh;
   background-color: var(--vy-white);
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 /* Decorative background shapes, pinned behind the shell content */
@@ -23,17 +23,15 @@
   pointer-events: none;
 }
 
-/* ---------- Sidebar ---------- */
+/* ---------- Sidebar ----------
+   Stretches to match the full height of .vy-main (flex default
+   align-items: stretch) so its background spans the whole page,
+   the same way the Figma rectangle covers the full dashboard height. */
 .vy-sidebar {
   flex: 0 0 var(--sidebar-width);
   width: var(--sidebar-width);
   background-color: var(--vy-white);
   box-shadow: var(--shadow-bar);
-  position: sticky;
-  top: 0;
-  align-self: flex-start;
-  height: 100vh;
-  overflow-y: auto;
   padding: 32px 28px;
   z-index: 20;
   transition: margin-left 0.2s ease;
@@ -162,7 +160,10 @@
 @media (max-width: 900px) {
   .vy-sidebar {
     position: fixed;
+    top: 0;
     left: 0;
+    height: 100vh;
+    overflow-y: auto;
     margin-left: calc(-1 * var(--sidebar-width));
   }
 
