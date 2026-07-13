@@ -33,7 +33,7 @@
         <!--Fonts START-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Dosis:wght@200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Dosis:wght@200..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
         <!--Fonts END-->
     </head>
 
@@ -50,38 +50,24 @@
         <!-- ===== Nav END ===== -->
         
         <!-- ===== Hero Banner START ===== -->
-        <section class="container"></section>
-        <!-- ===== Hero Banner END ===== -->
-
-        <section class="hero-banner container">
-            <div class="hero-decoration" aria-hidden="true"></div>
-
+        <img class="hero-bg" src="imgs/img-bg.svg">
+        <section class="container">
             <div class="hero-card">
-                <div class="sparkle-row" aria-hidden="true">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 0C16 8.837 23.163 16 32 16C23.163 16 16 23.163 16 32C16 23.163 8.837 16 0 16C8.837 16 16 8.837 16 0Z" fill="#59A7F6"/></svg>
-                    <svg width="22" height="22" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 0C16 8.837 23.163 16 32 16C23.163 16 16 23.163 16 32C16 23.163 8.837 16 0 16C8.837 16 16 8.837 16 0Z" fill="#8FBFF8"/></svg>
-                    <svg width="22" height="22" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 0C16 8.837 23.163 16 32 16C23.163 16 16 23.163 16 32C16 23.163 8.837 16 0 16C8.837 16 16 8.837 16 0Z" fill="#AE72F9"/></svg>
-                    <svg width="16" height="16" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 0C16 8.837 23.163 16 32 16C23.163 16 16 23.163 16 32C16 23.163 8.837 16 0 16C8.837 16 16 8.837 16 0Z" fill="#C9A6FB"/></svg>
+                <div class="hero-banner-stars">
+                    <img src="imgs/star-1.svg">
+                    <img src="imgs/star-2.svg">
+                    <img src="imgs/star-3.svg">
+                    <img src="imgs/star-4.svg">
                 </div>
                 <h1 class="hero-title">App Welcome Screen</h1>
                 <p class="hero-subtitle">Design Guidelines 2025</p>
             </div>
-
-            <div class="hero-cards-row">
-                <div class="hero-card-placeholder">
-                    <img src="https://placehold.co/483x262/e7eff7/3e5178?text=Dashboard+Preview" alt="Placeholder dashboard preview 1" loading="lazy">
-                </div>
-                <div class="hero-card-placeholder">
-                    <img src="https://placehold.co/483x262/e7eff7/3e5178?text=Widget+Preview" alt="Placeholder dashboard preview 2" loading="lazy">
-                </div>
-                <div class="hero-card-placeholder">
-                    <img src="https://placehold.co/483x262/e7eff7/3e5178?text=Report+Preview" alt="Placeholder dashboard preview 3" loading="lazy">
-                </div>
-                <div class="hero-card-placeholder">
-                    <img src="https://placehold.co/483x262/e7eff7/3e5178?text=Onboarding+Preview" alt="Placeholder dashboard preview 4" loading="lazy">
-                </div>
-            </div>
         </section>
+        <!-- ===== Hero Banner END ===== -->
+
+        <!-- ===== Screen Slide START ===== -->
+        <div style="height: 500px;"></div>
+        <!-- ===== Screen Slide END ===== -->
 
         <main class="page-layout container">
 
@@ -128,52 +114,37 @@
                 <!-- Chapter 01: Foundations -->
                 <section class="chapter" id="chapter-01">
                     <div class="chapter-header">
-                        <svg class="chapter-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 0C16 8.837 23.163 16 32 16C23.163 16 16 23.163 16 32C16 23.163 8.837 16 0 16C8.837 16 16 8.837 16 0Z" fill="#0385CA"/></svg>
-                        <span class="chapter-eyebrow">Chapter 01</span>
-                        <h2 class="chapter-title">Foundations</h2>
+                        <img class="sec-star" src="imgs/ch-1-star.svg">
+                        <p class="sec-subtitle">Chapter 01</p>
+                        <h2>Foundations</h2>
+                        <p>This chapter defines the basic principles that shapes not only the Welcome Screens but the live app as a whole. It covers the live app's typography, color swatches, and guidelines on looking for &amp; creating image assets.</p>
                     </div>
 
-                    <p class="chapter-intro">This chapter defines the basic principles that shapes not only the Welcome Screens but the live app as a whole. It covers the live app's typography, color swatches, and guidelines on looking for &amp; creating image assets.</p>
-
                     <div class="text-block" id="typography">
-                        <h3 class="text-block-title">Typography</h3>
+                        <h5 class="text-block-title">Typography</h5>
                         <p>The font used within the app is <strong>Inter</strong>, which was extracted from Element Plus' UI framework. However, Dosis was taken from the marketing site for the purpose of having a subhead also reflecting within product as well.</p>
                         <p>The size of the base text starts at 16px. To ensure readability across all desktop screens, the sizes are adjusted in accordance with the screen resolutions (1920, 1440, and 1280).</p>
 
-                        <div class="code-block-group">
-                            <div class="code-block">
-                                <p class="code-block-label">For Screen Size 1920 and above</p>
-                                <div class="copy-paste-code">
-                                    <pre><code>:root {
-  font-size: 16px;
-}
-
-h1 { font-size: 2.938rem; }  /* 47px */
-h2 { font-size: 2.563rem; }  /* 41px */
-h3 { font-size: 1.625rem; }  /* 26px */
-body { font-size: 1rem; }    /* 16px */</code></pre>
-                                    <button class="clipboard-btn" type="button" aria-label="Copy code">
-                                        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6.5" y="6.5" width="10" height="10" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M3.5 13.5V4.5C3.5 3.94772 3.94772 3.5 4.5 3.5H13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="code-block">
-                                <p class="code-block-label">For Screen Size 1440 and below</p>
-                                <div class="copy-paste-code">
-                                    <pre><code>:root {
-  font-size: 14px;
-}
-
-h1 { font-size: 2.5rem; }    /* 35px */
-h2 { font-size: 2.143rem; }  /* 30px */
-h3 { font-size: 1.357rem; }  /* 19px */
-body { font-size: 0.875rem; } /* 14px */</code></pre>
-                                    <button class="clipboard-btn" type="button" aria-label="Copy code">
-                                        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6.5" y="6.5" width="10" height="10" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M3.5 13.5V4.5C3.5 3.94772 3.94772 3.5 4.5 3.5H13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-                                    </button>
-                                </div>
+                        <div class="code-block">
+                            <p class="code-label">For Screen Size 1920 and above</p>
+                            <div class="copy-paste-code">
+                                <pre><code>add code here</code></pre>
+                                <button class="clipboard-btn" type="button" aria-label="Copy code">
+                                    <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6.5" y="6.5" width="10" height="10" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M3.5 13.5V4.5C3.5 3.94772 3.94772 3.5 4.5 3.5H13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                                </button>
                             </div>
                         </div>
+
+                        <div class="code-block">
+                            <p class="code-label">For Screen Size 1920 and above</p>
+                            <div class="copy-paste-code">
+                                <pre><code>add code here</code></pre>
+                                <button class="clipboard-btn" type="button" aria-label="Copy code">
+                                    <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6.5" y="6.5" width="10" height="10" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M3.5 13.5V4.5C3.5 3.94772 3.94772 3.5 4.5 3.5H13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                                </button>
+                            </div>
+                        </div>
+
                     </div>
 
                     <div class="text-block" id="image-guidelines">

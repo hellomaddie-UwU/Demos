@@ -44,30 +44,25 @@
 ───────────────────────────────────────────────*/
 .hero-banner {
     position:   relative;
-    margin-top: 32px;
     isolation:  isolate;
 }
 
-.hero-decoration {
-    position:  absolute;
-    left:      50%;
-    top:       120px;
-    transform: translateX(-50%) rotate(-8deg);
-    width:     150%;
-    height:    420px;
-    background: radial-gradient(ellipse 60% 100% at 30% 40%, rgba(89, 167, 246, 0.55), transparent 70%),
-                radial-gradient(ellipse 50% 90% at 65% 60%, rgba(174, 114, 249, 0.45), transparent 70%),
-                radial-gradient(ellipse 70% 100% at 50% 100%, rgba(89, 167, 246, 0.4), transparent 70%);
-    filter:    blur(60px);
-    z-index:   -1;
-    pointer-events: none;
-}
+.hero-bg {position: absolute; width: 100%; z-index: 0; top: 0;}
 
 .hero-card {
     background:      var(--color-card-bg);
     border-radius:   var(--radius-sm);
+    border:          1px solid rgba(255, 255, 255, 0.5);
     padding:         52px 60px;
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(3px);
+    z-index:         1;
+}
+
+.hero-banner-stars {
+    display: flex;
+    justify-content: start;
+    gap: var(--space-2);
+    margin-bottom: var(--space-2);
 }
 
 .sparkle-row {
@@ -79,48 +74,6 @@
 
 .sparkle-row svg {
     display: block;
-}
-
-.hero-title {
-    font-family:  var(--font-main);
-    font-weight:  700;
-    font-size:    var(--fs-h1);
-    line-height:  var(--lh-h1);
-    background:   var(--gradient-title);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color:        transparent;
-    margin-bottom: 4px;
-}
-
-.hero-subtitle {
-    font-family:    var(--font-subtitle);
-    font-weight:    600;
-    font-size:      var(--fs-subtitle);
-    letter-spacing: 0.78px;
-    text-transform: uppercase;
-    color:          var(--color-text-tertiary);
-}
-
-.hero-cards-row {
-    display: flex;
-    gap:     34px;
-    margin:  48px -80px 0;
-    padding: 0 80px;
-}
-
-.hero-card-placeholder {
-    flex:          1 1 0;
-    height:        262px;
-    border-radius: var(--radius-md);
-    overflow:      hidden;
-    background:    var(--color-card-bg);
-}
-
-.hero-card-placeholder img {
-    width:      100%;
-    height:     100%;
-    object-fit: cover;
 }
 
 /* ───────────────────────────────────────────────
@@ -153,85 +106,26 @@
     gap:            6px;
 }
 
-.toc-chapter-title {
-    font-family:    var(--font-main);
-    font-weight:    700;
-    font-size:      var(--fs-label);
-    letter-spacing: -0.17px;
-    text-transform: uppercase;
-    color:          var(--color-msp-blue);
-}
-
-.toc-links {
-    display:        flex;
-    flex-direction: column;
-    gap:            8px;
-}
-
-.toc-link {
-    font-family: var(--font-main);
-    font-weight: 500;
-    font-size:   var(--fs-body);
-    line-height: var(--lh-body);
-    color:       var(--color-text-secondary);
-    transition:  color 0.15s ease, padding-left 0.15s ease;
-}
-
-.toc-link:hover {
-    color: var(--color-msp-blue);
-}
-
-.toc-link.is-active {
-    color:        var(--color-msp-blue);
-    font-weight:  700;
-    padding-left: 4px;
-}
-
 /* ───────────────────────────────────────────────
 5. Chapter Header
 ───────────────────────────────────────────────*/
 .chapter {
     display:           flex;
     flex-direction:    column;
-    gap:               40px;
+    gap:               44px;
     scroll-margin-top: 32px;
 }
 
 .chapter-header {
     display:        flex;
     flex-direction: column;
-    gap:            8px;
+    gap:            0px;
+    align-items: start;
 }
 
-.chapter-icon {
-    width:         32px;
-    height:        32px;
-    margin-bottom: 4px;
-}
-
-.chapter-eyebrow {
-    font-family:    var(--font-main);
-    font-weight:    700;
-    font-size:      var(--fs-eyebrow);
-    letter-spacing: -0.22px;
-    text-transform: uppercase;
-    color:          var(--color-msp-blue);
-}
-
-.chapter-title {
-    font-family: var(--font-main);
-    font-weight: 700;
-    font-size:   var(--fs-h2);
-    line-height: var(--lh-h2);
-    color:       var(--color-dark-blue);
-}
-
-.chapter-intro {
-    font-family: var(--font-main);
-    font-weight: 500;
-    font-size:   var(--fs-body);
-    line-height: var(--lh-body);
-    max-width:   780px;
+.sec-star {
+    height: 32px;
+    width: auto;
 }
 
 /* ───────────────────────────────────────────────
@@ -240,73 +134,27 @@
 .text-block {
     display:           flex;
     flex-direction:    column;
-    gap:               16px;
+    gap:               20px;
     scroll-margin-top: 32px;
-}
-
-.text-block-title {
-    font-family: var(--font-main);
-    font-weight: 700;
-    font-size:   var(--fs-h3);
-    line-height: var(--lh-h3);
-    color:       var(--color-dark-blue);
-}
-
-.text-block p {
-    font-family: var(--font-main);
-    font-weight: 500;
-    font-size:   var(--fs-body);
-    line-height: var(--lh-body);
-}
-
-.text-block p + p {
-    margin-top: 16px;
-}
-
-.text-block strong {
-    color:       var(--color-dark-blue);
-    font-weight: 700;
 }
 
 /* ───────────────────────────────────────────────
 7. Code Blocks
 ───────────────────────────────────────────────*/
-.code-block-group {
-    display:        flex;
-    flex-direction: column;
-    gap:            20px;
-}
-
 .code-block {
-    display:        flex;
-    flex-direction: column;
-    gap:            8px;
-}
-
-.code-block-label {
-    font-family: var(--font-main);
-    font-weight: 700;
-    font-size:   var(--fs-label);
-    color:       var(--color-dark-blue);
+    display:         flex;
+    flex-direction:  column;
+    justify-content: start;
+    gap:             0px;
+    margin-bottom:   var(--space-5);
 }
 
 .copy-paste-code {
     position:      relative;
-    background:    var(--color-code-bg);
-    border:        1px solid var(--color-border-subtle);
+    background:    var(--code-bg);
+    border:        1px solid var(--code-border-subtle);
     border-radius: var(--radius-sm);
     padding:       16px;
-}
-
-.copy-paste-code pre {
-    font-family:   var(--font-main);
-    font-weight:   500;
-    font-size:     var(--fs-body);
-    line-height:   var(--lh-body);
-    color:         var(--color-code-text);
-    white-space:   pre-wrap;
-    word-break:    break-word;
-    padding-right: 48px;
 }
 
 .clipboard-btn {

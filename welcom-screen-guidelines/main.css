@@ -52,23 +52,26 @@ ol, ul {
     Primitive Tokens > Color Palettes
     ───────────────────────────────────────────────*/
     /*Mine*/
-    --page-bg: #f8f8f9;
+    --page-bg:      #f8f8f9;
+    --color-card-bg:rgba(255, 255, 255, 0.5);
+    --code-bg:          #e7eff7;
+    --code-border-subtle:    #cfdce9;
+
+    --gradient-title: linear-gradient(90deg, #59a7f6 0%, #ae72f9 41.397%, #59a7f6 100%);
 
     /*Brand*/
     --mspbots-blue:#0c82ca;
 
+    /*Text*/
+    --dark-blue:     #0c2651;
+    --text-body:     #606266;
+    --text-tertiary: #909398;
+    --text-code:     #3e5178;
+
     /*Generated*/
-    --color-card-bg:          rgba(255, 255, 255, 0.4);
-    --color-dark-blue:        #0c2651;
-    --color-text-secondary:   #606266;
-    --color-text-tertiary:    #909398;
-    --color-border-subtle:    #cfdce9;
-    --color-code-bg:          #e7eff7;
-    --color-code-text:        #3e5178;
     --color-clipboard-bg:     #d7e2ed;
     --color-clipboard-border: #afc2d5;
 
-    --gradient-title:     linear-gradient(90deg, #59a7f6 0%, #ae72f9 41.397%, #59a7f6 100%);
     --gradient-icon-chip: linear-gradient(135.76deg, #00e0c9 6.8283%, #2c77ff 35.395%, #6d74ff 85.827%);
 
         /* ───────────────────────────────────────────────
@@ -77,6 +80,7 @@ ol, ul {
     --font-chapter:  'Audiowide', sans-serif;
     --font-body:     'Raleway', sans-serif;
     --font-subtitle: 'Dosis', sans-serif;
+    --font-code:     'Space Mono', monospace;
     /*--font-mono:  for coding if ever I finally need it :)*/
 
     --text-xs:   0.75rem;    /* 12px */
@@ -130,8 +134,9 @@ CSS Variables - Design Tokens
 Page Layout
 ───────────────────────────────────────────────*/
 .container {
-    width:      100%;
-    padding: 80px 4%;
+    max-width: none;
+    margin:    0;
+    padding:   40px 6%;
 }
 
 .page-layout {
@@ -146,14 +151,105 @@ Page Layout
 /* ───────────────────────────────────────────────
 Typography
 ───────────────────────────────────────────────*/
-body {
-    color:       var(--color-text-secondary);
-    font-size:   var(--fs-body);
-    line-height: var(--lh-body);
+.hero-title {
+    font-family:             var(--font-body);
+    font-weight:             var(--font-weight-bold);
+    font-size:               var(--text-4xl);
+    line-height:             47px;
+    background:              var(--gradient-title);
+    -webkit-background-clip: text;
+    background-clip:         text;
+    color:                   transparent;
+    margin-bottom:           4px;
+}
+
+.hero-subtitle {
+    font-family:    var(--font-subtitle);
+    font-weight:    var(--font-weight-medium);
+    font-size:      var(--text-xl);
+    letter-spacing: 0.78px;
+    text-transform: uppercase;
+    color:          var(--text-tertiary);
+}
+
+.toc-chapter-title {
+    font-family:    var(--font-chapter);
+    font-weight:    var(--font-weight-bold);
+    font-size:      var(--text-base);
+    text-transform: uppercase;
+    color:          var(--mspbots-blue);
+}
+
+.toc-links {
+    display:        flex;
+    flex-direction: column;
+    gap:            8px;
+
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-regular);
+    font-size:   var(--text-base);
+    line-height: 25px;
+    color:       var(--text-body);
+    transition:  color 0.15s ease, padding-left 0.15s ease;
+}
+
+.toc-link:hover {
+    color: var(--mspbots-blue);
+}
+
+.toc-link.is-active {
+    color:        var(--dark-blue);
+    font-weight:  var(--font-weight-bold);
+    padding-left: 4px;
+}
+
+.sec-subtitle {
+    font-family: var(--font-chapter);
+    font-size: var(--text-lg);
+    color: var(--mspbots-blue);
+    text-transform: uppercase;
+    margin-bottom: 0px;
+}
+
+.text-block-title {
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-bold);
+    font-size:   var(--text-xl);
+    line-height: 32px;
+    color:       var(--dark-blue);
+}
+
+.code-label {
+    font-weight: var(--font-weight-bold);
+    color:       var(--dark-blue);
+}
+
+.copy-paste-code pre {
+    font-family:   var(--font-code);
+    font-weight:   var(--font-weight-regular);
+    font-size:     var(--text-base);
+    line-height:   25px;
+    color:         var(--text-code);
+    white-space:   pre-wrap;
+    word-break:    break-word;
+    text-align: left;
 }
 
 h1, h2, h3, h4 {
-    color: var(--color-dark-blue);
+    color: var(--dark-blue);
+}
+
+h2 {
+    font-size: var(--text-3xl);
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-bold);
+}
+
+p {
+    color:       var(--text-body);
+    font-size:   var(--text-base);
+    font-weight: var(--font-weight-regular);
+    line-height: 25px;
 }
 
 /* ───────────────────────────────────────────────
@@ -166,10 +262,6 @@ Responsive Settings
 
 /*Tablet LG START*/ /*lg*/
 @media screen and (max-width: 992px) {
-    .container {
-        padding: 0 48px;
-    }
-
     .page-layout {
         grid-template-columns: 1fr;
         gap:                   48px;
@@ -179,30 +271,8 @@ Responsive Settings
 
 /*Tablet*/ /*md*/
 @media screen and (max-width: 768px) {
-    .container {
-        padding: 0 32px;
-    }
-
-    :root {
-        --fs-h1: 2.25rem; /* 36px */
-        --lh-h1: 2.75rem; /* 44px */
-        --fs-h2: 2rem;    /* 32px */
-        --lh-h2: 2.5rem;  /* 40px */
-    }
 }
 
 /*Mobile*/ /*sm*/
 @media screen and (max-width: 567px) {
-    .container {
-        padding: 0 20px;
-    }
-
-    :root {
-        --fs-h1: 1.75rem;  /* 28px */
-        --lh-h1: 2.25rem;  /* 36px */
-        --fs-h2: 1.625rem; /* 26px */
-        --lh-h2: 2rem;     /* 32px */
-        --fs-h3: 1.375rem; /* 22px */
-        --lh-h3: 1.75rem;  /* 28px */
-    }
 }
