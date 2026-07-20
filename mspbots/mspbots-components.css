@@ -524,11 +524,10 @@ Testimonial Video Slider
     background:       linear-gradient(104deg, #d0e4f3 17.968%, #fff4d7 87.347%);
     border-radius:    19px;
     display:          flex;
-    align-items:      center;
-    justify-content:  center;
+    flex-direction:   column;
+    align-items:      top;
+    justify-content:  start;
     padding:          40px 32px;
-    aspect-ratio:     431 / 589;
-    height:           100%;
 }
 
 .quote-card p {
@@ -537,7 +536,6 @@ Testimonial Video Slider
     font-size:     var(--text-xl);
     line-height:   32px;
     color:         #000;
-    text-align:    center;
     margin-bottom: 0;
 }
 

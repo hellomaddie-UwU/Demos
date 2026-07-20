@@ -17,6 +17,8 @@ section, .section-dark {
     padding: 80px 9%;
 }
 
+.no-mb-section {padding-bottom: 0px;}
+
 .section-dark {
     background-color: var(--page-dark-bg);
     overflow-x:       hidden;
@@ -232,12 +234,15 @@ Agreement Profitability
 
 /* Testimonials */
 .testimonial-content {
-    display:               grid;
-    grid-template-columns: minmax(280px, 431px) 1fr;
+    display:               flex;
     gap:                   var(--space-7);
     align-items:           start;
     margin-top:            var(--space-9);
 }
+
+.quote-card {width: 30%; height: 400px;}
+
+.video-slider-col {width: 70%;}
 
 .video-slider-controls {
     display:         flex;
@@ -246,10 +251,24 @@ Agreement Profitability
     margin-bottom:   var(--space-5);
 }
 
-.video-slider-grid {
-    display:               grid;
-    grid-template-columns: 1fr 1fr;
-    gap:                   var(--space-6);
+.video-slider-viewport {overflow: hidden;}
+
+.video-slider-track {
+    display:    flex;
+    gap:        var(--space-6);
+    transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.video-slide {
+    flex:     0 0 calc((100% - var(--space-6)) / 2);
+    min-width: 0;
+}
+
+.video-slide iframe {
+    display:      block;
+    width:        100%;
+    aspect-ratio: 560 / 315;
+    height:       auto;
 }
 
 .video-thumb {aspect-ratio: 460 / 256;}
@@ -331,7 +350,13 @@ Responsive Settings
 
     .ap-vtab-img {height: 360px;}
 
-    .testimonial-content {grid-template-columns: 1fr;}
+    .testimonial-content {
+        flex-direction: column-reverse;
+    }
+
+    .quote-card {width: 100%; height: 250px;}
+
+    .video-slider-col {width: 100%;}
 
     .cta-next-steps {grid-template-columns: 1fr;}
 }
@@ -359,7 +384,7 @@ Responsive Settings
 
     .faq-question-text {font-size: var(--text-md); line-height: 24px;}
 
-    .video-slider-grid {grid-template-columns: 1fr;}
+    .video-slide {flex-basis: 100%;}
 
     .video-slider-controls {justify-content: center;}
 }
